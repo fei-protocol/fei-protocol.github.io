@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Permissions - Fei Protocol Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Fei Protocol Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Overview</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../user/user/" class="nav-link">User</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../developers/" class="nav-link">Developer</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../operator/operator/" class="nav-link">Operator</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/fei-protocol/fei-docs/edit/main/docs/developers/permissions.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="2"><a href="#minter_role" class="nav-link">MINTER_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#burner_role" class="nav-link">BURNER_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#govern_role" class="nav-link">GOVERN_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#pcv_controller_role" class="nav-link">PCV_CONTROLLER_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#guardian_role" class="nav-link">GUARDIAN_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#oracle_admin_role" class="nav-link">ORACLE_ADMIN_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#swap_admin_role" class="nav-link">SWAP_ADMIN_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#balancer_manager_admin_role" class="nav-link">BALANCER_MANAGER_ADMIN_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#psm_admin_role" class="nav-link">PSM_ADMIN_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="2"><a href="#tribal_chief_admin_role" class="nav-link">TRIBAL_CHIEF_ADMIN_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="minter_role">MINTER_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bondingCurve</td>
+<td><a href="https://etherscan.io/address/0xB783c0E21763bEf9F2d04E6499abFbe23AdB7e1F">0xB783c0E21763bEf9F2d04E6499abFbe23AdB7e1F</a></td>
+</tr>
+<tr>
+<td>uniswapPCVDeposit</td>
+<td><a href="https://etherscan.io/address/0x15958381E9E6dc98bD49655e36f524D2203a28bD">0x15958381E9E6dc98bD49655e36f524D2203a28bD</a></td>
+</tr>
+<tr>
+<td>feiDAOTimelock</td>
+<td><a href="https://etherscan.io/address/0xd51dbA7a94e1adEa403553A8235C302cEbF41a3c">0xd51dbA7a94e1adEa403553A8235C302cEbF41a3c</a></td>
+</tr>
+<tr>
+<td>daiBondingCurve</td>
+<td><a href="https://etherscan.io/address/0xC0afe0E649e32528666F993ce63822c3840e941a">0xC0afe0E649e32528666F993ce63822c3840e941a</a></td>
+</tr>
+<tr>
+<td>dpiUniswapPCVDeposit</td>
+<td><a href="https://etherscan.io/address/0x902199755219A9f8209862d09F1891cfb34F59a3">0x902199755219A9f8209862d09F1891cfb34F59a3</a></td>
+</tr>
+<tr>
+<td>pcvEquityMinter</td>
+<td><a href="https://etherscan.io/address/0x904Deb2Dac1EdfCBBb69b9c279aE5F75E57Cf5E9">0x904Deb2Dac1EdfCBBb69b9c279aE5F75E57Cf5E9</a></td>
+</tr>
+<tr>
+<td>collateralizationOracleKeeper</td>
+<td><a href="https://etherscan.io/address/0x62378C316a6161A613D02E11F65290aED79B3eD5">0x62378C316a6161A613D02E11F65290aED79B3eD5</a></td>
+</tr>
+<tr>
+<td>optimisticMinter</td>
+<td><a href="https://etherscan.io/address/0xE66c4De480Bd317054B5a3CF8E8689649d0728c9">0xE66c4De480Bd317054B5a3CF8E8689649d0728c9</a></td>
+</tr>
+<tr>
+<td>agEurAngleUniswapPCVDeposit</td>
+<td><a href="https://etherscan.io/address/0x7AC2Ab8143634419c5bc230A9f9955C3e29f64Ef">0x7AC2Ab8143634419c5bc230A9f9955C3e29f64Ef</a></td>
+</tr>
+<tr>
+<td>tribeRagequit</td>
+<td><a href="https://etherscan.io/address/0xE77d572F04904fFea40899FD907F7ADd6Ea5228A">0xE77d572F04904fFea40899FD907F7ADd6Ea5228A</a></td>
+</tr>
+<tr>
+<td>daiPSM</td>
+<td><a href="https://etherscan.io/address/0x210300C158f95E1342fD008aE417ef68311c49C2">0x210300C158f95E1342fD008aE417ef68311c49C2</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="burner_role">BURNER_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ethReserveStabilizer</td>
+<td><a href="https://etherscan.io/address/0x17305f0e18318994a57b494078CAC866A857F7b6">0x17305f0e18318994a57b494078CAC866A857F7b6</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="govern_role">GOVERN_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>core</td>
+<td><a href="https://etherscan.io/address/0x8d5ED43dCa8C2F7dFB20CF7b53CC7E593635d7b9">0x8d5ED43dCa8C2F7dFB20CF7b53CC7E593635d7b9</a></td>
+</tr>
+<tr>
+<td>timelock</td>
+<td><a href="https://etherscan.io/address/0x639572471f2f318464dc01066a56867130e45E25">0x639572471f2f318464dc01066a56867130e45E25</a></td>
+</tr>
+<tr>
+<td>feiDAOTimelock</td>
+<td><a href="https://etherscan.io/address/0xd51dbA7a94e1adEa403553A8235C302cEbF41a3c">0xd51dbA7a94e1adEa403553A8235C302cEbF41a3c</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pcv_controller_role">PCV_CONTROLLER_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>feiDAOTimelock</td>
+<td><a href="https://etherscan.io/address/0xd51dbA7a94e1adEa403553A8235C302cEbF41a3c">0xd51dbA7a94e1adEa403553A8235C302cEbF41a3c</a></td>
+</tr>
+<tr>
+<td>ratioPCVController</td>
+<td><a href="https://etherscan.io/address/0xB1410aeCe2c65fE9e107c58b5aa32e91B18f0BC7">0xB1410aeCe2c65fE9e107c58b5aa32e91B18f0BC7</a></td>
+</tr>
+<tr>
+<td>aaveEthPCVDripController</td>
+<td><a href="https://etherscan.io/address/0xb3D63876d95d3a5e591D4DE536dC410b97244086">0xb3D63876d95d3a5e591D4DE536dC410b97244086</a></td>
+</tr>
+<tr>
+<td>compoundEthPCVDripController</td>
+<td><a href="https://etherscan.io/address/0xa84C8be28f3d560059339f06C6b6c5B23f53C58C">0xa84C8be28f3d560059339f06C6b6c5B23f53C58C</a></td>
+</tr>
+<tr>
+<td>pcvGuardian</td>
+<td><a href="https://etherscan.io/address/0x2D1b1b509B6432A73e3d798572f0648f6453a5D9">0x2D1b1b509B6432A73e3d798572f0648f6453a5D9</a></td>
+</tr>
+<tr>
+<td>daiPCVDripController</td>
+<td><a href="https://etherscan.io/address/0x3e0f66c5687FF917809A3F7fA7096e1Bc409fB03">0x3e0f66c5687FF917809A3F7fA7096e1Bc409fB03</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="guardian_role">GUARDIAN_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>multisig</td>
+<td><a href="https://etherscan.io/address/0xB8f482539F2d3Ae2C9ea6076894df36D1f632775">0xB8f482539F2d3Ae2C9ea6076894df36D1f632775</a></td>
+</tr>
+<tr>
+<td>pcvGuardian</td>
+<td><a href="https://etherscan.io/address/0x2D1b1b509B6432A73e3d798572f0648f6453a5D9">0x2D1b1b509B6432A73e3d798572f0648f6453a5D9</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="oracle_admin_role">ORACLE_ADMIN_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>collateralizationOracleGuardian</td>
+<td><a href="https://etherscan.io/address/0x81De6bA8df84A4B679061952E171a27F096F3eAe">0x81De6bA8df84A4B679061952E171a27F096F3eAe</a></td>
+</tr>
+<tr>
+<td>optimisticTimelock</td>
+<td><a href="https://etherscan.io/address/0xbC9C084a12678ef5B516561df902fdc426d95483">0xbC9C084a12678ef5B516561df902fdc426d95483</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="swap_admin_role">SWAP_ADMIN_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvEquityMinter</td>
+<td><a href="https://etherscan.io/address/0x904Deb2Dac1EdfCBBb69b9c279aE5F75E57Cf5E9">0x904Deb2Dac1EdfCBBb69b9c279aE5F75E57Cf5E9</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="balancer_manager_admin_role">BALANCER_MANAGER_ADMIN_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="psm_admin_role">PSM_ADMIN_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="tribal_chief_admin_role">TRIBAL_CHIEF_ADMIN_ROLE</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>optimisticTimelock</td>
+<td><a href="https://etherscan.io/address/0xbC9C084a12678ef5B516561df902fdc426d95483">0xbC9C084a12678ef5B516561df902fdc426d95483</a></td>
+</tr>
+</tbody>
+</table>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
