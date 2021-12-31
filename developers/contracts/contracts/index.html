@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Protocol Contracts - Fei Protocol Docs</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">Fei Protocol Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../.." class="nav-link">Overview</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../user/user/" class="nav-link">User</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Developer <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../addresses/" class="dropdown-item">Mainnet Addresses</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Protocol Contracts</a>
+</li>
+                                    
+<li>
+    <a href="../../permissions/" class="dropdown-item">Permissions</a>
+</li>
+                                    
+<li>
+    <a href="../../bug-bounty/" class="dropdown-item">Bug Bounty</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../../operator/operator/" class="nav-link">Operator</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../addresses/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../permissions/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/fei-protocol/fei-docs/edit/main/docs/developers/contracts/contracts.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<ul>
+<li><a href="../TimelockController/">TimelockController</a></li>
+<li><a href="../GovernorTimelockCompound/">GovernorTimelockCompound</a></li>
+<li><a href="../ICompoundTimelock/">ICompoundTimelock</a></li>
+<li><a href="../IGovernorTimelock/">IGovernorTimelock</a></li>
+<li><a href="../ProxyAdmin/">ProxyAdmin</a></li>
+<li><a href="../BondingCurve/">BondingCurve</a></li>
+<li><a href="../EthBondingCurve/">EthBondingCurve</a></li>
+<li><a href="../IBondingCurve/">IBondingCurve</a></li>
+<li><a href="../Core/">Core</a></li>
+<li><a href="../ICore/">ICore</a></li>
+<li><a href="../ICoreV1/">ICoreV1</a></li>
+<li><a href="../FeiDAO/">FeiDAO</a></li>
+<li><a href="../FeiDAOTimelock/">FeiDAOTimelock</a></li>
+<li><a href="../IFeiDAO/">IFeiDAO</a></li>
+<li><a href="../TimelockInterface/">TimelockInterface</a></li>
+<li><a href="../TribeInterface/">TribeInterface</a></li>
+<li><a href="../ITimelockedDelegator/">ITimelockedDelegator</a></li>
+<li><a href="../ITribe/">ITribe</a></li>
+<li><a href="../ITribeMinter/">ITribeMinter</a></li>
+<li><a href="../OptimisticTimelock/">OptimisticTimelock</a></li>
+<li><a href="../IVotingToken/">IVotingToken</a></li>
+<li><a href="../QuadraticTimelockedDelegator/">QuadraticTimelockedDelegator</a></li>
+<li><a href="../Delegatee/">Delegatee</a></li>
+<li><a href="../QuadtraticTimelockedSubdelegator/">QuadtraticTimelockedSubdelegator</a></li>
+<li><a href="../Timelock/">Timelock</a></li>
+<li><a href="../TimelockedDelegator/">TimelockedDelegator</a></li>
+<li><a href="../Tribe/">Tribe</a></li>
+<li><a href="../TribeMinter/">TribeMinter</a></li>
+<li><a href="../CollateralizationOracleKeeper/">CollateralizationOracleKeeper</a></li>
+<li><a href="../ExchangerTimelock/">ExchangerTimelock</a></li>
+<li><a href="../IExchanger/">IExchanger</a></li>
+<li><a href="../TRIBERagequit/">TRIBERagequit</a></li>
+<li><a href="../ChainlinkOracleWrapper/">ChainlinkOracleWrapper</a></li>
+<li><a href="../CompositeOracle/">CompositeOracle</a></li>
+<li><a href="../ConstantOracle/">ConstantOracle</a></li>
+<li><a href="../CollateralizationOracle/">CollateralizationOracle</a></li>
+<li><a href="../IPausable/">IPausable</a></li>
+<li><a href="../CollateralizationOracleGuardian/">CollateralizationOracleGuardian</a></li>
+<li><a href="../CollateralizationOracleWrapper/">CollateralizationOracleWrapper</a></li>
+<li><a href="../ICollateralizationOracle/">ICollateralizationOracle</a></li>
+<li><a href="../ICollateralizationOracleWrapper/">ICollateralizationOracleWrapper</a></li>
+<li><a href="../IPCVGuardian/">IPCVGuardian</a></li>
+<li><a href="../PCVGuardian/">PCVGuardian</a></li>
+<li><a href="../AavePCVDeposit/">AavePCVDeposit</a></li>
+<li><a href="../IncentivesController/">IncentivesController</a></li>
+<li><a href="../LendingPool/">LendingPool</a></li>
+<li><a href="../AngleUniswapPCVDeposit/">AngleUniswapPCVDeposit</a></li>
+<li><a href="../IPoolManager/">IPoolManager</a></li>
+<li><a href="../IStableMaster/">IStableMaster</a></li>
+<li><a href="../IStakingRewards/">IStakingRewards</a></li>
+<li><a href="../BPTLens/">BPTLens</a></li>
+<li><a href="../BalancerLBPSwapper/">BalancerLBPSwapper</a></li>
+<li><a href="../CErc20/">CErc20</a></li>
+<li><a href="../ERC20CompoundPCVDeposit/">ERC20CompoundPCVDeposit</a></li>
+<li><a href="../CEther/">CEther</a></li>
+<li><a href="../EthCompoundPCVDeposit/">EthCompoundPCVDeposit</a></li>
+<li><a href="../ConvexPCVDeposit/">ConvexPCVDeposit</a></li>
+<li><a href="../CurvePCVDepositPlainPool/">CurvePCVDepositPlainPool</a></li>
+<li><a href="../EthLidoPCVDeposit/">EthLidoPCVDeposit</a></li>
+<li><a href="../ILido/">ILido</a></li>
+<li><a href="../IStableSwapSTETH/">IStableSwapSTETH</a></li>
+<li><a href="../DelegateRegistry/">DelegateRegistry</a></li>
+<li><a href="../SnapshotDelegatorPCVDeposit/">SnapshotDelegatorPCVDeposit</a></li>
+<li><a href="../ERC20TokemakPCVDeposit/">ERC20TokemakPCVDeposit</a></li>
+<li><a href="../ITokemakERC20Pool/">ITokemakERC20Pool</a></li>
+<li><a href="../EthTokemakPCVDeposit/">EthTokemakPCVDeposit</a></li>
+<li><a href="../ITokemakEthPool/">ITokemakEthPool</a></li>
+<li><a href="../IUniswapPCVDeposit/">IUniswapPCVDeposit</a></li>
+<li><a href="../UniswapPCVDeposit/">UniswapPCVDeposit</a></li>
+<li><a href="../ERC20Dripper/">ERC20Dripper</a></li>
+<li><a href="../ERC20PCVDepositWrapper/">ERC20PCVDepositWrapper</a></li>
+<li><a href="../IPCVDripController/">IPCVDripController</a></li>
+<li><a href="../PCVDepositWrapper/">PCVDepositWrapper</a></li>
+<li><a href="../PCVDripController/">PCVDripController</a></li>
+<li><a href="../RatioPCVController/">RatioPCVController</a></li>
+<li><a href="../StaticPCVDepositWrapper/">StaticPCVDepositWrapper</a></li>
+<li><a href="../CoreRef/">CoreRef</a></li>
+<li><a href="../ICoreRef/">ICoreRef</a></li>
+<li><a href="../EthReserveStabilizer/">EthReserveStabilizer</a></li>
+<li><a href="../ITribeReserveStabilizer/">ITribeReserveStabilizer</a></li>
+<li><a href="../PriceBoundPSM/">PriceBoundPSM</a></li>
+<li><a href="../TribeReserveStabilizer/">TribeReserveStabilizer</a></li>
+<li><a href="../IFeiRewardsDistributor/">IFeiRewardsDistributor</a></li>
+<li><a href="../ITribalChief/">ITribalChief</a></li>
+<li><a href="../StakingTokenWrapper/">StakingTokenWrapper</a></li>
+<li><a href="../TribalChief/">TribalChief</a></li>
+<li><a href="../IAutoRewardsDistributor/">IAutoRewardsDistributor</a></li>
+<li><a href="../ITimelock/">ITimelock</a></li>
+<li><a href="../TribalChiefSync/">TribalChiefSync</a></li>
+<li><a href="../AutoRewardsDistributor/">AutoRewardsDistributor</a></li>
+<li><a href="../IRewardsDistributorAdmin/">IRewardsDistributorAdmin</a></li>
+<li><a href="../RewardsDistributorAdmin/">RewardsDistributorAdmin</a></li>
+<li><a href="../Fei/">Fei</a></li>
+<li><a href="../IFei/">IFei</a></li>
+<li><a href="../FeiTimedMinter/">FeiTimedMinter</a></li>
+<li><a href="../IFeiTimedMinter/">IFeiTimedMinter</a></li>
+<li><a href="../IPCVEquityMinter/">IPCVEquityMinter</a></li>
+<li><a href="../OwnableTimedMinter/">OwnableTimedMinter</a></li>
+<li><a href="../PCVEquityMinter/">PCVEquityMinter</a></li>
+<li><a href="../CoreRefPauseableLib/">CoreRefPauseableLib</a></li>
+<li><a href="../ITokenTimelock/">ITokenTimelock</a></li>
+<li><a href="../LinearTokenTimelock/">LinearTokenTimelock</a></li>
+<li><a href="../QuadraticTokenTimelock/">QuadraticTokenTimelock</a></li>
+<li><a href="../TokenTimelock/">TokenTimelock</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
