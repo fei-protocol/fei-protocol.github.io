@@ -108,6 +108,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#dai-minting-and-redemption-limits" class="nav-link">DAI Minting and Redemption Limits</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -122,7 +126,12 @@
 <li>Fei Improvement Proposals - TODO</li>
 <li>Optimistic Approval - TODO</li>
 <li>Moderation - TODO</li>
-</ul></div>
+<li>DAI Minting and Redemptions</li>
+</ul>
+<h2 id="dai-minting-and-redemption-limits">DAI Minting and Redemption Limits</h2>
+<p>The PSM allows users to both mint FEI by providing DAI and redeem their FEI for DAI. Both of these actions are rate limited.</p>
+<p>For redemptions, every 30 minutes, 5m DAI will be dripped into PSM if it has less than 5m DAI to allow continuous redemptions.</p>
+<p>FEI is minted from a buffer that is continually refilled and has a maximum balance of 10m FEI. Whenever the buffer contains under 10m FEI, the PSM adds 10k FEI per second to the buffer. </p></div>
             </div>
         </div>
 

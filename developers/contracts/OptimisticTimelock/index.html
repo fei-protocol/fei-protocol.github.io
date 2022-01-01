@@ -343,13 +343,13 @@
 </thead>
 <tbody>
 <tr>
-<td>id indexed</td>
-<td>bytes32</td>
+<td>id</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>index indexed</td>
-<td>uint256</td>
+<td>index</td>
+<td>uint256 indexed</td>
 <td></td>
 </tr>
 <tr>
@@ -383,13 +383,13 @@
 </thead>
 <tbody>
 <tr>
-<td>id indexed</td>
-<td>bytes32</td>
+<td>id</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>index indexed</td>
-<td>uint256</td>
+<td>index</td>
+<td>uint256 indexed</td>
 <td></td>
 </tr>
 <tr>
@@ -433,8 +433,8 @@
 </thead>
 <tbody>
 <tr>
-<td>id indexed</td>
-<td>bytes32</td>
+<td>id</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 </tbody>
@@ -453,13 +453,13 @@
 </thead>
 <tbody>
 <tr>
-<td>oldContractAdminRole indexed</td>
-<td>bytes32</td>
+<td>oldContractAdminRole</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>newContractAdminRole indexed</td>
-<td>bytes32</td>
+<td>newContractAdminRole</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 </tbody>
@@ -478,13 +478,13 @@
 </thead>
 <tbody>
 <tr>
-<td>oldCore indexed</td>
-<td>address</td>
+<td>oldCore</td>
+<td>address indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>newCore indexed</td>
-<td>address</td>
+<td>newCore</td>
+<td>address indexed</td>
 <td></td>
 </tr>
 </tbody>
@@ -548,18 +548,18 @@
 </thead>
 <tbody>
 <tr>
-<td>role indexed</td>
-<td>bytes32</td>
+<td>role</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>previousAdminRole indexed</td>
-<td>bytes32</td>
+<td>previousAdminRole</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>newAdminRole indexed</td>
-<td>bytes32</td>
+<td>newAdminRole</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 </tbody>
@@ -578,18 +578,18 @@
 </thead>
 <tbody>
 <tr>
-<td>role indexed</td>
-<td>bytes32</td>
+<td>role</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>account indexed</td>
-<td>address</td>
+<td>account</td>
+<td>address indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>sender indexed</td>
-<td>address</td>
+<td>sender</td>
+<td>address indexed</td>
 <td></td>
 </tr>
 </tbody>
@@ -608,18 +608,18 @@
 </thead>
 <tbody>
 <tr>
-<td>role indexed</td>
-<td>bytes32</td>
+<td>role</td>
+<td>bytes32 indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>account indexed</td>
-<td>address</td>
+<td>account</td>
+<td>address indexed</td>
 <td></td>
 </tr>
 <tr>
-<td>sender indexed</td>
-<td>address</td>
+<td>sender</td>
+<td>address indexed</td>
 <td></td>
 </tr>
 </tbody>
@@ -796,7 +796,7 @@
 <tr>
 <td></td>
 <td>address</td>
-<td></td>
+<td>ICore implementation address</td>
 </tr>
 </tbody>
 </table>
@@ -905,7 +905,7 @@
 <tr>
 <td></td>
 <td>address</td>
-<td></td>
+<td>IFei implementation address</td>
 </tr>
 </tbody>
 </table>
@@ -928,7 +928,7 @@
 <tr>
 <td></td>
 <td>uint256</td>
-<td></td>
+<td>fei amount held</td>
 </tr>
 </tbody>
 </table>
@@ -1714,7 +1714,7 @@
 <tr>
 <td></td>
 <td>address</td>
-<td></td>
+<td>IERC20 implementation address</td>
 </tr>
 </tbody>
 </table>
@@ -1737,7 +1737,7 @@
 <tr>
 <td></td>
 <td>uint256</td>
-<td></td>
+<td>tribe amount held</td>
 </tr>
 </tbody>
 </table>
