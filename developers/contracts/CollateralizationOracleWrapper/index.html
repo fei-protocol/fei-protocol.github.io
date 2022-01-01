@@ -94,6 +94,10 @@
             
             <li class="nav-item" data-level="1"><a href="#collateralizationoraclewrapper" class="nav-link">CollateralizationOracleWrapper</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mainnet-implementations" class="nav-link">Mainnet implementations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="4"><a href="#cachedvalueupdate" class="nav-link">CachedValueUpdate</a>
@@ -316,6 +320,25 @@
 <p>Author: eswak</p>
 </blockquote>
 <p>Reads a list of PCVDeposit that report their amount of collateral         and the amount of protocol-owned FEI they manage, to deduce the         protocol-wide collateralization ratio.</p>
+<h2 id="mainnet-implementations">Mainnet implementations</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>collateralizationOracleWrapper</td>
+<td><a href="https://etherscan.io/address/0xd1866289B4Bd22D453fFF676760961e0898EE9BF">0xd1866289B4Bd22D453fFF676760961e0898EE9BF</a></td>
+</tr>
+<tr>
+<td>collateralizationOracleWrapperImpl</td>
+<td><a href="https://etherscan.io/address/0x656aA9c9875eB089b11869d4730d6963D25E76ad">0x656aA9c9875eB089b11869d4730d6963D25E76ad</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="events">Events</h2>
 <h4 id="cachedvalueupdate">CachedValueUpdate</h4>
 <pre><code class="language-javascript">event CachedValueUpdate(address,uint256,uint256,int256)

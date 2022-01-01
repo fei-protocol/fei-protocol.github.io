@@ -94,6 +94,10 @@
             
             <li class="nav-item" data-level="1"><a href="#tribalchief" class="nav-link">TribalChief</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mainnet-implementations" class="nav-link">Mainnet implementations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="4"><a href="#contractadminroleupdate" class="nav-link">ContractAdminRoleUpdate</a>
@@ -336,6 +340,25 @@
 <p><a href="../contracts/">⬅️ Contracts</a></p>
 <h1 id="tribalchief"><a href="https://github.com/fei-protocol/fei-protocol-core/blob/develop/contracts/staking/TribalChief.sol">TribalChief</a></h1>
 <p>The idea for this TribalChief contract is to be the owner of tribe token that is deposited into this contract.This contract was forked from sushiswap and has been modified to distribute staking rewards in tribe. All legacy code that relied on MasterChef V1 has been removed so that this contract will pay out staking rewards in tribe. The assumption this code makes is that this MasterChief contract will be funded before going live and offering staking rewards. This contract will not have the ability to mint tribe.</p>
+<h2 id="mainnet-implementations">Mainnet implementations</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tribalChief</td>
+<td><a href="https://etherscan.io/address/0x9e1076cC0d19F9B0b8019F384B0a29E48Ee46f7f">0x9e1076cC0d19F9B0b8019F384B0a29E48Ee46f7f</a></td>
+</tr>
+<tr>
+<td>tribalChiefImpl</td>
+<td><a href="https://etherscan.io/address/0x2d91362e8bcAA8826b482B531dcb170FC9d17777">0x2d91362e8bcAA8826b482B531dcb170FC9d17777</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="events">Events</h2>
 <h4 id="contractadminroleupdate">ContractAdminRoleUpdate</h4>
 <pre><code class="language-javascript">event ContractAdminRoleUpdate(bytes32,bytes32)

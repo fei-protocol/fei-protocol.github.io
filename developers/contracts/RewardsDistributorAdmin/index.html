@@ -94,6 +94,10 @@
             
             <li class="nav-item" data-level="1"><a href="#rewardsdistributoradmin" class="nav-link">RewardsDistributorAdmin</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mainnet-implementations" class="nav-link">Mainnet implementations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="4"><a href="#contractadminroleupdate" class="nav-link">ContractAdminRoleUpdate</a>
@@ -284,6 +288,21 @@
 <p><a href="../contracts/">⬅️ Contracts</a></p>
 <h1 id="rewardsdistributoradmin"><a href="https://github.com/fei-protocol/fei-protocol-core/blob/develop/contracts/staking/feirari/RewardsDistributorAdmin.sol">RewardsDistributorAdmin</a></h1>
 <p>this contract has its own internal ACL. The reasons for doing this and not leveraging core are twofold. One, it simplifies devops operations around adding and removing users, and two, by being self contained, it is more efficient as it does not need to make external calls to figure out who has a particular role.</p>
+<h2 id="mainnet-implementations">Mainnet implementations</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rewardsDistributorAdmin</td>
+<td><a href="https://etherscan.io/address/0x4e979E8b136Cd7BdEBB83ea50a599C3BED1e15c0">0x4e979E8b136Cd7BdEBB83ea50a599C3BED1e15c0</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="events">Events</h2>
 <h4 id="contractadminroleupdate">ContractAdminRoleUpdate</h4>
 <pre><code class="language-javascript">event ContractAdminRoleUpdate(bytes32,bytes32)

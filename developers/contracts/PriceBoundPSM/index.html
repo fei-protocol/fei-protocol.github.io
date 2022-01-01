@@ -94,6 +94,10 @@
             
             <li class="nav-item" data-level="1"><a href="#priceboundpsm" class="nav-link">PriceBoundPSM</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#mainnet-implementations" class="nav-link">Mainnet implementations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="4"><a href="#allocatesurplus" class="nav-link">AllocateSurplus</a>
@@ -456,6 +460,21 @@
 <p><a href="../contracts/">⬅️ Contracts</a></p>
 <h1 id="priceboundpsm"><a href="https://github.com/fei-protocol/fei-protocol-core/blob/develop/contracts/stabilizer/PriceBoundPSM.sol">PriceBoundPSM</a></h1>
 <p>contract to create a price bound DAI PSM This contract will allow swaps when the price of DAI is between 98 cents and 1.02 by default These defaults are changeable by the admin and governance by calling floor and ceiling setters setOracleFloor and setOracleCeiling</p>
+<h2 id="mainnet-implementations">Mainnet implementations</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>daiPSM</td>
+<td><a href="https://etherscan.io/address/0x210300C158f95E1342fD008aE417ef68311c49C2">0x210300C158f95E1342fD008aE417ef68311c49C2</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="events">Events</h2>
 <h4 id="allocatesurplus">AllocateSurplus</h4>
 <pre><code class="language-javascript">event AllocateSurplus(address,uint256)
