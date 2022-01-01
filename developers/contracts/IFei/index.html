@@ -96,10 +96,78 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#approval" class="nav-link">Approval</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#burning" class="nav-link">Burning</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#incentivecontractupdate" class="nav-link">IncentiveContractUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#minting" class="nav-link">Minting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transfer" class="nav-link">Transfer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#allowance" class="nav-link">allowance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#approve" class="nav-link">approve</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#balanceof" class="nav-link">balanceOf</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#burn" class="nav-link">burn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#burnfrom" class="nav-link">burnFrom</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#incentivecontract" class="nav-link">incentiveContract</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mint" class="nav-link">mint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#permit" class="nav-link">permit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setincentivecontract" class="nav-link">setIncentiveContract</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#totalsupply" class="nav-link">totalSupply</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transfer_1" class="nav-link">transfer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transferfrom" class="nav-link">transferFrom</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -115,28 +183,582 @@
 <p>Author: Fei Protocol</p>
 </blockquote>
 <h2 id="events">Events</h2>
-<ul>
-<li>Approval(address,address,uint256)</li>
-<li>Burning(address,address,uint256)</li>
-<li>IncentiveContractUpdate(address,address)</li>
-<li>Minting(address,address,uint256)</li>
-<li>Transfer(address,address,uint256)</li>
-</ul>
+<h4 id="approval">Approval</h4>
+<pre><code class="language-javascript">event Approval(address,address,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>spender indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="burning">Burning</h4>
+<pre><code class="language-javascript">event Burning(address,address,uint256)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_to indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_burner indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="incentivecontractupdate">IncentiveContractUpdate</h4>
+<pre><code class="language-javascript">event IncentiveContractUpdate(address,address)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_incentivized indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_incentiveContract indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="minting">Minting</h4>
+<pre><code class="language-javascript">event Minting(address,address,uint256)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_to indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_minter indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transfer">Transfer</h4>
+<pre><code class="language-javascript">event Transfer(address,address,uint256)
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>to indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>allowance(address,address)</li>
-<li>approve(address,uint256)</li>
-<li>balanceOf(address)</li>
-<li>burn(uint256)</li>
-<li>burnFrom(address,uint256)</li>
-<li>incentiveContract(address)</li>
-<li>mint(address,uint256)</li>
-<li>permit(address,address,uint256,uint256,uint8,bytes32,bytes32)</li>
-<li>setIncentiveContract(address,address)</li>
-<li>totalSupply()</li>
-<li>transfer(address,uint256)</li>
-<li>transferFrom(address,address,uint256)</li>
-</ul></div>
+<h4 id="allowance">allowance</h4>
+<pre><code class="language-javascript">function allowance(address,address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>Returns the remaining number of tokens that <code>spender</code> will be allowed to spend on behalf of <code>owner</code> through {transferFrom}. This is zero by default. This value changes when {approve} or {transferFrom} are called.</p>
+</blockquote>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="approve">approve</h4>
+<pre><code class="language-javascript">function approve(address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>Sets <code>amount</code> as the allowance of <code>spender</code> over the caller's tokens. Returns a boolean value indicating whether the operation succeeded. IMPORTANT: Beware that changing an allowance with this method brings the risk that someone may use both the old and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards: https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729 Emits an {Approval} event.</p>
+</blockquote>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="balanceof">balanceOf</h4>
+<pre><code class="language-javascript">function balanceOf(address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>Returns the amount of tokens owned by <code>account</code>.</p>
+</blockquote>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="burn">burn</h4>
+<pre><code class="language-javascript">function burn(uint256) nonpayable
+</code></pre>
+<h5 id="params_8">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="burnfrom">burnFrom</h4>
+<pre><code class="language-javascript">function burnFrom(address,uint256) nonpayable
+</code></pre>
+<h5 id="params_9">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="incentivecontract">incentiveContract</h4>
+<pre><code class="language-javascript">function incentiveContract(address) view returns(address)
+</code></pre>
+<h5 id="params_10">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mint">mint</h4>
+<pre><code class="language-javascript">function mint(address,uint256) nonpayable
+</code></pre>
+<h5 id="params_11">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="permit">permit</h4>
+<pre><code class="language-javascript">function permit(address,address,uint256,uint256,uint8,bytes32,bytes32) nonpayable
+</code></pre>
+<h5 id="params_12">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>deadline</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>v</td>
+<td>uint8</td>
+<td></td>
+</tr>
+<tr>
+<td>r</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+<tr>
+<td>s</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setincentivecontract">setIncentiveContract</h4>
+<pre><code class="language-javascript">function setIncentiveContract(address,address) nonpayable
+</code></pre>
+<h5 id="params_13">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>incentive</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="totalsupply">totalSupply</h4>
+<pre><code class="language-javascript">function totalSupply() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>Returns the amount of tokens in existence.</p>
+</blockquote>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transfer_1">transfer</h4>
+<pre><code class="language-javascript">function transfer(address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>Moves <code>amount</code> tokens from the caller's account to <code>recipient</code>. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.</p>
+</blockquote>
+<h5 id="params_14">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recipient</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transferfrom">transferFrom</h4>
+<pre><code class="language-javascript">function transferFrom(address,address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>Moves <code>amount</code> tokens from <code>sender</code> to <code>recipient</code> using the allowance mechanism. <code>amount</code> is then deducted from the caller's allowance. Returns a boolean value indicating whether the operation succeeded. Emits a {Transfer} event.</p>
+</blockquote>
+<h5 id="params_15">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

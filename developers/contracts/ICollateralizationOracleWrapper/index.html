@@ -96,10 +96,110 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#cachedvalueupdate" class="nav-link">CachedValueUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#collateralizationoracleupdate" class="nav-link">CollateralizationOracleUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#deviationthresholdupdate" class="nav-link">DeviationThresholdUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#readpauseoverrideupdate" class="nav-link">ReadPauseOverrideUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#update" class="nav-link">Update</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#cachedprotocolcontrolledvalue" class="nav-link">cachedProtocolControlledValue</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#cachedprotocolequity" class="nav-link">cachedProtocolEquity</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#cachedusercirculatingfei" class="nav-link">cachedUserCirculatingFei</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#collateralizationoracle" class="nav-link">collateralizationOracle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#deviationthresholdbasispoints" class="nav-link">deviationThresholdBasisPoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#isexceededdeviationthreshold" class="nav-link">isExceededDeviationThreshold</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#isoutdated" class="nav-link">isOutdated</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#isoutdatedorexceededdeviationthreshold" class="nav-link">isOutdatedOrExceededDeviationThreshold</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#isovercollateralized" class="nav-link">isOvercollateralized</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pcvstats" class="nav-link">pcvStats</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pcvstatscurrent" class="nav-link">pcvStatsCurrent</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#read" class="nav-link">read</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#readpauseoverride" class="nav-link">readPauseOverride</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setcache" class="nav-link">setCache</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setcollateralizationoracle" class="nav-link">setCollateralizationOracle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setdeviationthresholdbasispoints" class="nav-link">setDeviationThresholdBasisPoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setreadpauseoverride" class="nav-link">setReadPauseOverride</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setvalidityduration" class="nav-link">setValidityDuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#update_1" class="nav-link">update</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#updateifoutdated" class="nav-link">updateIfOutdated</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -115,36 +215,553 @@
 <p>Author: Fei Protocol</p>
 </blockquote>
 <h2 id="events">Events</h2>
-<ul>
-<li>CachedValueUpdate(address,uint256,uint256,int256)</li>
-<li>CollateralizationOracleUpdate(address,address,address)</li>
-<li>DeviationThresholdUpdate(address,uint256,uint256)</li>
-<li>ReadPauseOverrideUpdate(bool)</li>
-<li>Update(uint256)</li>
-</ul>
+<h4 id="cachedvalueupdate">CachedValueUpdate</h4>
+<pre><code class="language-javascript">event CachedValueUpdate(address,uint256,uint256,int256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>protocolControlledValue indexed</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>userCirculatingFei indexed</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>protocolEquity indexed</td>
+<td>int256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="collateralizationoracleupdate">CollateralizationOracleUpdate</h4>
+<pre><code class="language-javascript">event CollateralizationOracleUpdate(address,address,address)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>oldOracleAddress indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newOracleAddress indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="deviationthresholdupdate">DeviationThresholdUpdate</h4>
+<pre><code class="language-javascript">event DeviationThresholdUpdate(address,uint256,uint256)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>oldThreshold indexed</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newThreshold indexed</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="readpauseoverrideupdate">ReadPauseOverrideUpdate</h4>
+<pre><code class="language-javascript">event ReadPauseOverrideUpdate(bool)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readPauseOverride</td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="update">Update</h4>
+<pre><code class="language-javascript">event Update(uint256)
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_peg</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>cachedProtocolControlledValue()</li>
-<li>cachedProtocolEquity()</li>
-<li>cachedUserCirculatingFei()</li>
-<li>collateralizationOracle()</li>
-<li>deviationThresholdBasisPoints()</li>
-<li>isExceededDeviationThreshold()</li>
-<li>isOutdated()</li>
-<li>isOutdatedOrExceededDeviationThreshold()</li>
-<li>isOvercollateralized()</li>
-<li>pcvStats()</li>
-<li>pcvStatsCurrent()</li>
-<li>read()</li>
-<li>readPauseOverride()</li>
-<li>setCache(uint256,uint256,int256)</li>
-<li>setCollateralizationOracle(address)</li>
-<li>setDeviationThresholdBasisPoints(uint256)</li>
-<li>setReadPauseOverride(bool)</li>
-<li>setValidityDuration(uint256)</li>
-<li>update()</li>
-<li>updateIfOutdated()</li>
-</ul></div>
+<h4 id="cachedprotocolcontrolledvalue">cachedProtocolControlledValue</h4>
+<pre><code class="language-javascript">function cachedProtocolControlledValue() view returns(uint256)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="cachedprotocolequity">cachedProtocolEquity</h4>
+<pre><code class="language-javascript">function cachedProtocolEquity() view returns(int256)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>int256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="cachedusercirculatingfei">cachedUserCirculatingFei</h4>
+<pre><code class="language-javascript">function cachedUserCirculatingFei() view returns(uint256)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="collateralizationoracle">collateralizationOracle</h4>
+<pre><code class="language-javascript">function collateralizationOracle() view returns(address)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="deviationthresholdbasispoints">deviationThresholdBasisPoints</h4>
+<pre><code class="language-javascript">function deviationThresholdBasisPoints() view returns(uint256)
+</code></pre>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="isexceededdeviationthreshold">isExceededDeviationThreshold</h4>
+<pre><code class="language-javascript">function isExceededDeviationThreshold() view returns(bool)
+</code></pre>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="isoutdated">isOutdated</h4>
+<pre><code class="language-javascript">function isOutdated() view returns(bool)
+</code></pre>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="isoutdatedorexceededdeviationthreshold">isOutdatedOrExceededDeviationThreshold</h4>
+<pre><code class="language-javascript">function isOutdatedOrExceededDeviationThreshold() view returns(bool)
+</code></pre>
+<h5 id="returns_7">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="isovercollateralized">isOvercollateralized</h4>
+<pre><code class="language-javascript">function isOvercollateralized() view returns(bool)
+</code></pre>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pcvstats">pcvStats</h4>
+<pre><code class="language-javascript">function pcvStats() view returns(uint256,uint256,int256,bool)
+</code></pre>
+<h5 id="returns_9">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>protocolControlledValue</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>userCirculatingFei</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>protocolEquity</td>
+<td>int256</td>
+<td></td>
+</tr>
+<tr>
+<td>validityStatus</td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pcvstatscurrent">pcvStatsCurrent</h4>
+<pre><code class="language-javascript">function pcvStatsCurrent() view returns(uint256,uint256,int256,bool)
+</code></pre>
+<h5 id="returns_10">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>protocolControlledValue</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>userCirculatingFei</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>protocolEquity</td>
+<td>int256</td>
+<td></td>
+</tr>
+<tr>
+<td>validityStatus</td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="read">read</h4>
+<pre><code class="language-javascript">function read() view returns(tuple,bool)
+</code></pre>
+<h5 id="returns_11">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>tuple</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="readpauseoverride">readPauseOverride</h4>
+<pre><code class="language-javascript">function readPauseOverride() view returns(bool)
+</code></pre>
+<h5 id="returns_12">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setcache">setCache</h4>
+<pre><code class="language-javascript">function setCache(uint256,uint256,int256) nonpayable
+</code></pre>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>protocolControlledValue</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>userCirculatingFei</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>protocolEquity</td>
+<td>int256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setcollateralizationoracle">setCollateralizationOracle</h4>
+<pre><code class="language-javascript">function setCollateralizationOracle(address) nonpayable
+</code></pre>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_newCollateralizationOracle</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setdeviationthresholdbasispoints">setDeviationThresholdBasisPoints</h4>
+<pre><code class="language-javascript">function setDeviationThresholdBasisPoints(uint256) nonpayable
+</code></pre>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_newDeviationThresholdBasisPoints</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setreadpauseoverride">setReadPauseOverride</h4>
+<pre><code class="language-javascript">function setReadPauseOverride(bool) nonpayable
+</code></pre>
+<h5 id="params_8">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newReadPauseOverride</td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setvalidityduration">setValidityDuration</h4>
+<pre><code class="language-javascript">function setValidityDuration(uint256) nonpayable
+</code></pre>
+<h5 id="params_9">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_validityDuration</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="update_1">update</h4>
+<pre><code class="language-javascript">function update() nonpayable
+</code></pre>
+<h4 id="updateifoutdated">updateIfOutdated</h4>
+<pre><code class="language-javascript">function updateIfOutdated() nonpayable
+</code></pre></div>
             </div>
         </div>
 

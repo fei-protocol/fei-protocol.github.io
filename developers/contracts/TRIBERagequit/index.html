@@ -96,10 +96,122 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#accept" class="nav-link">Accept</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#enabled" class="nav-link">Enabled</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#exchange" class="nav-link">Exchange</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#bothpartiesaccepted" class="nav-link">bothPartiesAccepted</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#claimed" class="nav-link">claimed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#coreaddress" class="nav-link">coreAddress</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#exchangerate" class="nav-link">exchangeRate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#fei" class="nav-link">fei</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getcirculatingtribe" class="nav-link">getCirculatingTribe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#guardian" class="nav-link">guardian</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#intrinsicvalueexchangeratebase" class="nav-link">intrinsicValueExchangeRateBase</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#merkleroot" class="nav-link">merkleRoot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#ngmi" class="nav-link">ngmi</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#ragequitend" class="nav-link">rageQuitEnd</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#ragequitstart" class="nav-link">rageQuitStart</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#rewardsdripper" class="nav-link">rewardsDripper</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#rgt" class="nav-link">rgt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#rgtaccept" class="nav-link">rgtAccept</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#rgtaccepted" class="nav-link">rgtAccepted</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#rgttimelock" class="nav-link">rgtTimelock</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#scalar" class="nav-link">scalar</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setbothpartiesaccepted" class="nav-link">setBothPartiesAccepted</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setexchangerate" class="nav-link">setExchangeRate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribe" class="nav-link">tribe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribeaccept" class="nav-link">tribeAccept</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribeaccepted" class="nav-link">tribeAccepted</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#triberaridao" class="nav-link">tribeRariDAO</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribetimelock" class="nav-link">tribeTimelock</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -116,39 +228,637 @@
 </blockquote>
 <p>Exchange TRIBE for FEI at Intrinsic Value (semi-manually set) Intrinsic Value = equity / circulating TRIBE. equity = PCV - user FEI circulating TRIBE = total supply - treasury - liquidity mining</p>
 <h2 id="events">Events</h2>
-<ul>
-<li>Accept(address)</li>
-<li>Enabled(address)</li>
-<li>Exchange(address,uint256,uint256)</li>
-</ul>
+<h4 id="accept">Accept</h4>
+<pre><code class="language-javascript">event Accept(address)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dao indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="enabled">Enabled</h4>
+<pre><code class="language-javascript">event Enabled(address)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="exchange">Exchange</h4>
+<pre><code class="language-javascript">event Exchange(address,uint256,uint256)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amountIn</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>amountOut</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>bothPartiesAccepted()</li>
-<li>claimed(address)</li>
-<li>coreAddress()</li>
-<li>exchangeRate(uint256)</li>
-<li>fei()</li>
-<li>getCirculatingTribe()</li>
-<li>guardian()</li>
-<li>intrinsicValueExchangeRateBase()</li>
-<li>merkleRoot()</li>
-<li>ngmi(uint256,uint256,bytes32[])</li>
-<li>rageQuitEnd()</li>
-<li>rageQuitStart()</li>
-<li>rewardsDripper()</li>
-<li>rgt()</li>
-<li>rgtAccept()</li>
-<li>rgtAccepted()</li>
-<li>rgtTimelock()</li>
-<li>scalar()</li>
-<li>setBothPartiesAccepted()</li>
-<li>setExchangeRate(uint256)</li>
-<li>tribe()</li>
-<li>tribeAccept()</li>
-<li>tribeAccepted()</li>
-<li>tribeRariDAO()</li>
-<li>tribeTimelock()</li>
-</ul></div>
+<h4 id="bothpartiesaccepted">bothPartiesAccepted</h4>
+<pre><code class="language-javascript">function bothPartiesAccepted() view returns(bool)
+</code></pre>
+<blockquote>
+<p>tells whether or not both parties have accepted the deal</p>
+</blockquote>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="claimed">claimed</h4>
+<pre><code class="language-javascript">function claimed(address) view returns(uint256)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="coreaddress">coreAddress</h4>
+<pre><code class="language-javascript">function coreAddress() view returns(address)
+</code></pre>
+<blockquote>
+<p>tribe treasury, removed from circulating supply</p>
+</blockquote>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="exchangerate">exchangeRate</h4>
+<pre><code class="language-javascript">function exchangeRate(uint256) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>recalculate the exchange amount using the protocolEquity</p>
+</blockquote>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>protocolEquity</td>
+<td>uint256</td>
+<td>the protocol equity</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="fei">fei</h4>
+<pre><code class="language-javascript">function fei() view returns(address)
+</code></pre>
+<blockquote>
+<p>you already know</p>
+</blockquote>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getcirculatingtribe">getCirculatingTribe</h4>
+<pre><code class="language-javascript">function getCirculatingTribe() view returns(uint256)
+</code></pre>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="guardian">guardian</h4>
+<pre><code class="language-javascript">function guardian() view returns(address)
+</code></pre>
+<blockquote>
+<p>guardian multisig, sets the IV before DAO vote</p>
+</blockquote>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="intrinsicvalueexchangeratebase">intrinsicValueExchangeRateBase</h4>
+<pre><code class="language-javascript">function intrinsicValueExchangeRateBase() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>Intrinsic value exchange rate (IV), scaled by 1e9</p>
+</blockquote>
+<h5 id="returns_7">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="merkleroot">merkleRoot</h4>
+<pre><code class="language-javascript">function merkleRoot() view returns(bytes32)
+</code></pre>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ngmi">ngmi</h4>
+<pre><code class="language-javascript">function ngmi(uint256,uint256,bytes32[]) nonpayable
+</code></pre>
+<blockquote>
+<p>ragequit held TRIBE with FEI</p>
+<p>not gonna make it</p>
+</blockquote>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td>the amount to redeem in TRIBE</td>
+</tr>
+<tr>
+<td>totalMerkleAmount</td>
+<td>uint256</td>
+<td>the amount of TRIBE allocated to the caller in the merkle drop</td>
+</tr>
+<tr>
+<td>merkleProof</td>
+<td>bytes32[]</td>
+<td>a proof proving that the caller may redeem up to <code>totalMerkleAmount</code> amount of tribe</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ragequitend">rageQuitEnd</h4>
+<pre><code class="language-javascript">function rageQuitEnd() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>last timestamp for ragequit</p>
+</blockquote>
+<h5 id="returns_9">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ragequitstart">rageQuitStart</h4>
+<pre><code class="language-javascript">function rageQuitStart() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>first timestamp for ragequit</p>
+</blockquote>
+<h5 id="returns_10">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="rewardsdripper">rewardsDripper</h4>
+<pre><code class="language-javascript">function rewardsDripper() view returns(address)
+</code></pre>
+<blockquote>
+<p>tribe liquidity mining dripper, removed from circulating supply</p>
+</blockquote>
+<h5 id="returns_11">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="rgt">rgt</h4>
+<pre><code class="language-javascript">function rgt() view returns(address)
+</code></pre>
+<h5 id="returns_12">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="rgtaccept">rgtAccept</h4>
+<pre><code class="language-javascript">function rgtAccept() nonpayable
+</code></pre>
+<blockquote>
+<p>function for the rari timelock to accept the deal</p>
+</blockquote>
+<h4 id="rgtaccepted">rgtAccepted</h4>
+<pre><code class="language-javascript">function rgtAccepted() view returns(bool)
+</code></pre>
+<h5 id="returns_13">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="rgttimelock">rgtTimelock</h4>
+<pre><code class="language-javascript">function rgtTimelock() view returns(address)
+</code></pre>
+<h5 id="returns_14">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="scalar">scalar</h4>
+<pre><code class="language-javascript">function scalar() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>the granularity of the exchange rate</p>
+</blockquote>
+<h5 id="returns_15">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setbothpartiesaccepted">setBothPartiesAccepted</h4>
+<pre><code class="language-javascript">function setBothPartiesAccepted() nonpayable
+</code></pre>
+<blockquote>
+<p>make sure Tribe rari timelock is active</p>
+</blockquote>
+<h4 id="setexchangerate">setExchangeRate</h4>
+<pre><code class="language-javascript">function setExchangeRate(uint256) nonpayable returns(uint256)
+</code></pre>
+<blockquote>
+<p>Update the exchange rate based on protocol equity</p>
+<p>only callable once by guardian</p>
+</blockquote>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>protocolEquity</td>
+<td>uint256</td>
+<td>the protocol equity</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_16">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribe">tribe</h4>
+<pre><code class="language-javascript">function tribe() view returns(address)
+</code></pre>
+<h5 id="returns_17">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribeaccept">tribeAccept</h4>
+<pre><code class="language-javascript">function tribeAccept() nonpayable
+</code></pre>
+<blockquote>
+<p>function for the tribe timelock to accept the deal</p>
+</blockquote>
+<h4 id="tribeaccepted">tribeAccepted</h4>
+<pre><code class="language-javascript">function tribeAccepted() view returns(bool)
+</code></pre>
+<h5 id="returns_18">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="triberaridao">tribeRariDAO</h4>
+<pre><code class="language-javascript">function tribeRariDAO() view returns(address)
+</code></pre>
+<blockquote>
+<p>the new DAO to assume governance for rgtTimelock</p>
+</blockquote>
+<h5 id="returns_19">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribetimelock">tribeTimelock</h4>
+<pre><code class="language-javascript">function tribeTimelock() view returns(address)
+</code></pre>
+<h5 id="returns_20">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

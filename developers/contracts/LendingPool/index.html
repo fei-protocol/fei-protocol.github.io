@@ -96,6 +96,14 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#deposit" class="nav-link">deposit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#withdraw" class="nav-link">withdraw</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -107,10 +115,71 @@
 
 <h1 id="lendingpool">LendingPool</h1>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>deposit(address,uint256,address,uint16)</li>
-<li>withdraw(address,uint256,address)</li>
-</ul></div>
+<h4 id="deposit">deposit</h4>
+<pre><code class="language-javascript">function deposit(address,uint256,address,uint16) nonpayable
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>asset</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>onBehalfOf</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>referralCode</td>
+<td>uint16</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="withdraw">withdraw</h4>
+<pre><code class="language-javascript">function withdraw(address,uint256,address) nonpayable
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>asset</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>to</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

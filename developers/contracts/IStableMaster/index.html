@@ -96,6 +96,22 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#agtoken" class="nav-link">agToken</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#burn" class="nav-link">burn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mint" class="nav-link">mint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#unpause" class="nav-link">unpause</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -107,12 +123,126 @@
 
 <h1 id="istablemaster">IStableMaster</h1>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>agToken()</li>
-<li>burn(uint256,address,address,address,uint256)</li>
-<li>mint(uint256,address,address,uint256)</li>
-<li>unpause(bytes32,address)</li>
-</ul></div>
+<h4 id="agtoken">agToken</h4>
+<pre><code class="language-javascript">function agToken() nonpayable returns(address)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="burn">burn</h4>
+<pre><code class="language-javascript">function burn(uint256,address,address,address,uint256) nonpayable
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>burner</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>dest</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>poolManager</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>minCollatAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mint">mint</h4>
+<pre><code class="language-javascript">function mint(uint256,address,address,uint256) nonpayable
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>user</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>poolManager</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>minStableAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="unpause">unpause</h4>
+<pre><code class="language-javascript">function unpause(bytes32,address) nonpayable
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>agent</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+<tr>
+<td>poolManager</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

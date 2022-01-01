@@ -96,10 +96,126 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#approval" class="nav-link">Approval</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delegatechanged" class="nav-link">DelegateChanged</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delegatevoteschanged" class="nav-link">DelegateVotesChanged</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#minterchanged" class="nav-link">MinterChanged</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transfer" class="nav-link">Transfer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#delegation_typehash" class="nav-link">DELEGATION_TYPEHASH</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#domain_typehash" class="nav-link">DOMAIN_TYPEHASH</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#permit_typehash" class="nav-link">PERMIT_TYPEHASH</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#allowance" class="nav-link">allowance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#approve" class="nav-link">approve</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#balanceof" class="nav-link">balanceOf</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#checkpoints" class="nav-link">checkpoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#decimals" class="nav-link">decimals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delegate" class="nav-link">delegate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delegatebysig" class="nav-link">delegateBySig</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delegates" class="nav-link">delegates</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getcurrentvotes" class="nav-link">getCurrentVotes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getpriorvotes" class="nav-link">getPriorVotes</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mint" class="nav-link">mint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#minter" class="nav-link">minter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#name" class="nav-link">name</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#nonces" class="nav-link">nonces</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#numcheckpoints" class="nav-link">numCheckpoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#permit" class="nav-link">permit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setminter" class="nav-link">setMinter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#symbol" class="nav-link">symbol</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#totalsupply" class="nav-link">totalSupply</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transfer_1" class="nav-link">transfer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transferfrom" class="nav-link">transferFrom</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -111,40 +227,993 @@
 
 <h1 id="tribe">Tribe</h1>
 <h2 id="events">Events</h2>
-<ul>
-<li>Approval(address,address,uint256)</li>
-<li>DelegateChanged(address,address,address)</li>
-<li>DelegateVotesChanged(address,uint256,uint256)</li>
-<li>MinterChanged(address,address)</li>
-<li>Transfer(address,address,uint256)</li>
-</ul>
+<h4 id="approval">Approval</h4>
+<pre><code class="language-javascript">event Approval(address,address,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>spender indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="delegatechanged">DelegateChanged</h4>
+<pre><code class="language-javascript">event DelegateChanged(address,address,address)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delegator indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>fromDelegate indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>toDelegate indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="delegatevoteschanged">DelegateVotesChanged</h4>
+<pre><code class="language-javascript">event DelegateVotesChanged(address,uint256,uint256)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delegate indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>previousBalance</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newBalance</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="minterchanged">MinterChanged</h4>
+<pre><code class="language-javascript">event MinterChanged(address,address)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>minter</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newMinter</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transfer">Transfer</h4>
+<pre><code class="language-javascript">event Transfer(address,address,uint256)
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>to indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>DELEGATION_TYPEHASH()</li>
-<li>DOMAIN_TYPEHASH()</li>
-<li>PERMIT_TYPEHASH()</li>
-<li>allowance(address,address)</li>
-<li>approve(address,uint256)</li>
-<li>balanceOf(address)</li>
-<li>checkpoints(address,uint32)</li>
-<li>decimals()</li>
-<li>delegate(address)</li>
-<li>delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32)</li>
-<li>delegates(address)</li>
-<li>getCurrentVotes(address)</li>
-<li>getPriorVotes(address,uint256)</li>
-<li>mint(address,uint256)</li>
-<li>minter()</li>
-<li>name()</li>
-<li>nonces(address)</li>
-<li>numCheckpoints(address)</li>
-<li>permit(address,address,uint256,uint256,uint8,bytes32,bytes32)</li>
-<li>setMinter(address)</li>
-<li>symbol()</li>
-<li>totalSupply()</li>
-<li>transfer(address,uint256)</li>
-<li>transferFrom(address,address,uint256)</li>
-</ul></div>
+<h4 id="delegation_typehash">DELEGATION_TYPEHASH</h4>
+<pre><code class="language-javascript">function DELEGATION_TYPEHASH() view returns(bytes32)
+</code></pre>
+<blockquote>
+<p>The EIP-712 typehash for the delegation struct used by the contract</p>
+</blockquote>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="domain_typehash">DOMAIN_TYPEHASH</h4>
+<pre><code class="language-javascript">function DOMAIN_TYPEHASH() view returns(bytes32)
+</code></pre>
+<blockquote>
+<p>The EIP-712 typehash for the contract's domain</p>
+</blockquote>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="permit_typehash">PERMIT_TYPEHASH</h4>
+<pre><code class="language-javascript">function PERMIT_TYPEHASH() view returns(bytes32)
+</code></pre>
+<blockquote>
+<p>The EIP-712 typehash for the permit struct used by the contract</p>
+</blockquote>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="allowance">allowance</h4>
+<pre><code class="language-javascript">function allowance(address,address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>Get the number of tokens <code>spender</code> is approved to spend on behalf of <code>account</code></p>
+</blockquote>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td>The address of the account holding the funds</td>
+</tr>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td>The address of the account spending the funds</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="approve">approve</h4>
+<pre><code class="language-javascript">function approve(address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>Approve <code>spender</code> to transfer up to <code>amount</code> from <code>src</code></p>
+<p>This will overwrite the approval amount for <code>spender</code>  and is subject to issues noted <a href="https://eips.ethereum.org/EIPS/eip-20#approve">here</a></p>
+</blockquote>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td>The address of the account which may transfer tokens</td>
+</tr>
+<tr>
+<td>rawAmount</td>
+<td>uint256</td>
+<td>The number of tokens that are approved (2^256-1 means infinite)</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="balanceof">balanceOf</h4>
+<pre><code class="language-javascript">function balanceOf(address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>Get the number of tokens held by the <code>account</code></p>
+</blockquote>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td>The address of the account to get the balance of</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="checkpoints">checkpoints</h4>
+<pre><code class="language-javascript">function checkpoints(address,uint32) view returns(uint32,uint96)
+</code></pre>
+<blockquote>
+<p>A record of votes checkpoints for each account, by index</p>
+</blockquote>
+<h5 id="params_8">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>uint32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fromBlock</td>
+<td>uint32</td>
+<td></td>
+</tr>
+<tr>
+<td>votes</td>
+<td>uint96</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="decimals">decimals</h4>
+<pre><code class="language-javascript">function decimals() view returns(uint8)
+</code></pre>
+<blockquote>
+<p>EIP-20 token decimals for this token</p>
+</blockquote>
+<h5 id="returns_7">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="delegate">delegate</h4>
+<pre><code class="language-javascript">function delegate(address) nonpayable
+</code></pre>
+<blockquote>
+<p>Delegate votes from <code>msg.sender</code> to <code>delegatee</code></p>
+</blockquote>
+<h5 id="params_9">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delegatee</td>
+<td>address</td>
+<td>The address to delegate votes to</td>
+</tr>
+</tbody>
+</table>
+<h4 id="delegatebysig">delegateBySig</h4>
+<pre><code class="language-javascript">function delegateBySig(address,uint256,uint256,uint8,bytes32,bytes32) nonpayable
+</code></pre>
+<blockquote>
+<p>Delegates votes from signatory to <code>delegatee</code></p>
+</blockquote>
+<h5 id="params_10">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delegatee</td>
+<td>address</td>
+<td>The address to delegate votes to</td>
+</tr>
+<tr>
+<td>nonce</td>
+<td>uint256</td>
+<td>The contract state required to match the signature</td>
+</tr>
+<tr>
+<td>expiry</td>
+<td>uint256</td>
+<td>The time at which to expire the signature</td>
+</tr>
+<tr>
+<td>v</td>
+<td>uint8</td>
+<td>The recovery byte of the signature</td>
+</tr>
+<tr>
+<td>r</td>
+<td>bytes32</td>
+<td>Half of the ECDSA signature pair</td>
+</tr>
+<tr>
+<td>s</td>
+<td>bytes32</td>
+<td>Half of the ECDSA signature pair</td>
+</tr>
+</tbody>
+</table>
+<h4 id="delegates">delegates</h4>
+<pre><code class="language-javascript">function delegates(address) view returns(address)
+</code></pre>
+<blockquote>
+<p>A record of each accounts delegate</p>
+</blockquote>
+<h5 id="params_11">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getcurrentvotes">getCurrentVotes</h4>
+<pre><code class="language-javascript">function getCurrentVotes(address) view returns(uint96)
+</code></pre>
+<blockquote>
+<p>Gets the current votes balance for <code>account</code></p>
+</blockquote>
+<h5 id="params_12">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td>The address to get votes balance</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_9">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint96</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getpriorvotes">getPriorVotes</h4>
+<pre><code class="language-javascript">function getPriorVotes(address,uint256) view returns(uint96)
+</code></pre>
+<blockquote>
+<p>Determine the prior number of votes for an account as of a block number</p>
+<p>Block number must be a finalized block or else this function will revert to prevent misinformation.</p>
+</blockquote>
+<h5 id="params_13">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td>The address of the account to check</td>
+</tr>
+<tr>
+<td>blockNumber</td>
+<td>uint256</td>
+<td>The block number to get the vote balance at</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_10">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint96</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mint">mint</h4>
+<pre><code class="language-javascript">function mint(address,uint256) nonpayable
+</code></pre>
+<blockquote>
+<p>Mint new tokens</p>
+</blockquote>
+<h5 id="params_14">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dst</td>
+<td>address</td>
+<td>The address of the destination account</td>
+</tr>
+<tr>
+<td>rawAmount</td>
+<td>uint256</td>
+<td>The number of tokens to be minted</td>
+</tr>
+</tbody>
+</table>
+<h4 id="minter">minter</h4>
+<pre><code class="language-javascript">function minter() view returns(address)
+</code></pre>
+<blockquote>
+<p>Address which may mint new tokens</p>
+</blockquote>
+<h5 id="returns_11">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="name">name</h4>
+<pre><code class="language-javascript">function name() view returns(string)
+</code></pre>
+<blockquote>
+<p>EIP-20 token name for this token</p>
+</blockquote>
+<h5 id="returns_12">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="nonces">nonces</h4>
+<pre><code class="language-javascript">function nonces(address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>A record of states for signing / validating signatures</p>
+</blockquote>
+<h5 id="params_15">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_13">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="numcheckpoints">numCheckpoints</h4>
+<pre><code class="language-javascript">function numCheckpoints(address) view returns(uint32)
+</code></pre>
+<blockquote>
+<p>The number of checkpoints for each account</p>
+</blockquote>
+<h5 id="params_16">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_14">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="permit">permit</h4>
+<pre><code class="language-javascript">function permit(address,address,uint256,uint256,uint8,bytes32,bytes32) nonpayable
+</code></pre>
+<blockquote>
+<p>Triggers an approval from owner to spends</p>
+</blockquote>
+<h5 id="params_17">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td>address</td>
+<td>The address to approve from</td>
+</tr>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td>The address to be approved</td>
+</tr>
+<tr>
+<td>rawAmount</td>
+<td>uint256</td>
+<td>The number of tokens that are approved (2^256-1 means infinite)</td>
+</tr>
+<tr>
+<td>deadline</td>
+<td>uint256</td>
+<td>The time at which to expire the signature</td>
+</tr>
+<tr>
+<td>v</td>
+<td>uint8</td>
+<td>The recovery byte of the signature</td>
+</tr>
+<tr>
+<td>r</td>
+<td>bytes32</td>
+<td>Half of the ECDSA signature pair</td>
+</tr>
+<tr>
+<td>s</td>
+<td>bytes32</td>
+<td>Half of the ECDSA signature pair</td>
+</tr>
+</tbody>
+</table>
+<h4 id="setminter">setMinter</h4>
+<pre><code class="language-javascript">function setMinter(address) nonpayable
+</code></pre>
+<blockquote>
+<p>Change the minter address</p>
+</blockquote>
+<h5 id="params_18">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>minter_</td>
+<td>address</td>
+<td>The address of the new minter</td>
+</tr>
+</tbody>
+</table>
+<h4 id="symbol">symbol</h4>
+<pre><code class="language-javascript">function symbol() view returns(string)
+</code></pre>
+<blockquote>
+<p>EIP-20 token symbol for this token</p>
+</blockquote>
+<h5 id="returns_15">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="totalsupply">totalSupply</h4>
+<pre><code class="language-javascript">function totalSupply() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>Total number of tokens in circulation</p>
+</blockquote>
+<h5 id="returns_16">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transfer_1">transfer</h4>
+<pre><code class="language-javascript">function transfer(address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>Transfer <code>amount</code> tokens from <code>msg.sender</code> to <code>dst</code></p>
+</blockquote>
+<h5 id="params_19">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dst</td>
+<td>address</td>
+<td>The address of the destination account</td>
+</tr>
+<tr>
+<td>rawAmount</td>
+<td>uint256</td>
+<td>The number of tokens to transfer</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_17">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transferfrom">transferFrom</h4>
+<pre><code class="language-javascript">function transferFrom(address,address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>Transfer <code>amount</code> tokens from <code>src</code> to <code>dst</code></p>
+</blockquote>
+<h5 id="params_20">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>address</td>
+<td>The address of the source account</td>
+</tr>
+<tr>
+<td>dst</td>
+<td>address</td>
+<td>The address of the destination account</td>
+</tr>
+<tr>
+<td>rawAmount</td>
+<td>uint256</td>
+<td>The number of tokens to transfer</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_18">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

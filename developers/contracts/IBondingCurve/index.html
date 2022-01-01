@@ -96,10 +96,106 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#bufferupdate" class="nav-link">BufferUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#discountupdate" class="nav-link">DiscountUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mintcapupdate" class="nav-link">MintCapUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#purchase" class="nav-link">Purchase</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#reset" class="nav-link">Reset</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#scaleupdate" class="nav-link">ScaleUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#allocate" class="nav-link">allocate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#atscale" class="nav-link">atScale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#availabletomint" class="nav-link">availableToMint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#buffer" class="nav-link">buffer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#discount" class="nav-link">discount</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getamountout" class="nav-link">getAmountOut</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getcurrentprice" class="nav-link">getCurrentPrice</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mintcap" class="nav-link">mintCap</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#purchase_1" class="nav-link">purchase</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#reset_1" class="nav-link">reset</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#scale" class="nav-link">scale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setbuffer" class="nav-link">setBuffer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setdiscount" class="nav-link">setDiscount</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setincentivefrequency" class="nav-link">setIncentiveFrequency</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setmintcap" class="nav-link">setMintCap</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setscale" class="nav-link">setScale</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#token" class="nav-link">token</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#totalpurchased" class="nav-link">totalPurchased</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -111,35 +207,522 @@
 
 <h1 id="ibondingcurve">IBondingCurve</h1>
 <h2 id="events">Events</h2>
-<ul>
-<li>BufferUpdate(uint256,uint256)</li>
-<li>DiscountUpdate(uint256,uint256)</li>
-<li>MintCapUpdate(uint256,uint256)</li>
-<li>Purchase(address,uint256,uint256)</li>
-<li>Reset(uint256)</li>
-<li>ScaleUpdate(uint256,uint256)</li>
-</ul>
+<h4 id="bufferupdate">BufferUpdate</h4>
+<pre><code class="language-javascript">event BufferUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldBuffer</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newBuffer</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="discountupdate">DiscountUpdate</h4>
+<pre><code class="language-javascript">event DiscountUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldDiscount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newDiscount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mintcapupdate">MintCapUpdate</h4>
+<pre><code class="language-javascript">event MintCapUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldMint</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newMint</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="purchase">Purchase</h4>
+<pre><code class="language-javascript">event Purchase(address,uint256,uint256)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amountIn</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>amountOut</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="reset">Reset</h4>
+<pre><code class="language-javascript">event Reset(uint256)
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldTotalPurchased</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="scaleupdate">ScaleUpdate</h4>
+<pre><code class="language-javascript">event ScaleUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldScale</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newScale</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>allocate()</li>
-<li>atScale()</li>
-<li>availableToMint()</li>
-<li>buffer()</li>
-<li>discount()</li>
-<li>getAmountOut(uint256)</li>
-<li>getCurrentPrice()</li>
-<li>mintCap()</li>
-<li>purchase(address,uint256)</li>
-<li>reset()</li>
-<li>scale()</li>
-<li>setBuffer(uint256)</li>
-<li>setDiscount(uint256)</li>
-<li>setIncentiveFrequency(uint256)</li>
-<li>setMintCap(uint256)</li>
-<li>setScale(uint256)</li>
-<li>token()</li>
-<li>totalPurchased()</li>
-</ul></div>
+<h4 id="allocate">allocate</h4>
+<pre><code class="language-javascript">function allocate() nonpayable
+</code></pre>
+<h4 id="atscale">atScale</h4>
+<pre><code class="language-javascript">function atScale() view returns(bool)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="availabletomint">availableToMint</h4>
+<pre><code class="language-javascript">function availableToMint() view returns(uint256)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="buffer">buffer</h4>
+<pre><code class="language-javascript">function buffer() view returns(uint256)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="discount">discount</h4>
+<pre><code class="language-javascript">function discount() view returns(uint256)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getamountout">getAmountOut</h4>
+<pre><code class="language-javascript">function getAmountOut(uint256) view returns(uint256)
+</code></pre>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amountIn</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amountOut</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getcurrentprice">getCurrentPrice</h4>
+<pre><code class="language-javascript">function getCurrentPrice() view returns(tuple)
+</code></pre>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>tuple</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mintcap">mintCap</h4>
+<pre><code class="language-javascript">function mintCap() view returns(uint256)
+</code></pre>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="purchase_1">purchase</h4>
+<pre><code class="language-javascript">function purchase(address,uint256) payable returns(uint256)
+</code></pre>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amountIn</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_7">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amountOut</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="reset_1">reset</h4>
+<pre><code class="language-javascript">function reset() nonpayable
+</code></pre>
+<h4 id="scale">scale</h4>
+<pre><code class="language-javascript">function scale() view returns(uint256)
+</code></pre>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setbuffer">setBuffer</h4>
+<pre><code class="language-javascript">function setBuffer(uint256) nonpayable
+</code></pre>
+<h5 id="params_8">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newBuffer</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setdiscount">setDiscount</h4>
+<pre><code class="language-javascript">function setDiscount(uint256) nonpayable
+</code></pre>
+<h5 id="params_9">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newDiscount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setincentivefrequency">setIncentiveFrequency</h4>
+<pre><code class="language-javascript">function setIncentiveFrequency(uint256) nonpayable
+</code></pre>
+<h5 id="params_10">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newFrequency</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setmintcap">setMintCap</h4>
+<pre><code class="language-javascript">function setMintCap(uint256) nonpayable
+</code></pre>
+<h5 id="params_11">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newMintCap</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setscale">setScale</h4>
+<pre><code class="language-javascript">function setScale(uint256) nonpayable
+</code></pre>
+<h5 id="params_12">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newScale</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="token">token</h4>
+<pre><code class="language-javascript">function token() view returns(address)
+</code></pre>
+<h5 id="returns_9">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="totalpurchased">totalPurchased</h4>
+<pre><code class="language-javascript">function totalPurchased() view returns(uint256)
+</code></pre>
+<h5 id="returns_10">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

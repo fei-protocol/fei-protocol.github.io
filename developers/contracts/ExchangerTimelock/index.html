@@ -96,10 +96,54 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#ownershiptransferred" class="nav-link">OwnershipTransferred</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#exchangetotimelock" class="nav-link">exchangeToTimelock</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#exchanger" class="nav-link">exchanger</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#guardian" class="nav-link">guardian</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#owner" class="nav-link">owner</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#recoverrgt" class="nav-link">recoverRGT</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#renounceownership" class="nav-link">renounceOwnership</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#rgt" class="nav-link">rgt</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#timelock" class="nav-link">timelock</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transferownership" class="nav-link">transferOwnership</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribe" class="nav-link">tribe</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -116,22 +160,199 @@
 </blockquote>
 <p>For Rari core contributors to trustlessly maintain incentive alignment</p>
 <h2 id="events">Events</h2>
-<ul>
-<li>OwnershipTransferred(address,address)</li>
-</ul>
+<h4 id="ownershiptransferred">OwnershipTransferred</h4>
+<pre><code class="language-javascript">event OwnershipTransferred(address,address)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>previousOwner indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newOwner indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>exchangeToTimelock()</li>
-<li>exchanger()</li>
-<li>guardian()</li>
-<li>owner()</li>
-<li>recoverRGT()</li>
-<li>renounceOwnership()</li>
-<li>rgt()</li>
-<li>timelock()</li>
-<li>transferOwnership(address)</li>
-<li>tribe()</li>
-</ul></div>
+<h4 id="exchangetotimelock">exchangeToTimelock</h4>
+<pre><code class="language-javascript">function exchangeToTimelock() nonpayable
+</code></pre>
+<blockquote>
+<p>exchange RGT to TRIBE and send to timelock</p>
+</blockquote>
+<h4 id="exchanger">exchanger</h4>
+<pre><code class="language-javascript">function exchanger() view returns(address)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="guardian">guardian</h4>
+<pre><code class="language-javascript">function guardian() view returns(address)
+</code></pre>
+<blockquote>
+<p>rari DAO timelock can clawback in event of no-deal</p>
+</blockquote>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="owner">owner</h4>
+<pre><code class="language-javascript">function owner() view returns(address)
+</code></pre>
+<blockquote>
+<p>Returns the address of the current owner.</p>
+</blockquote>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="recoverrgt">recoverRGT</h4>
+<pre><code class="language-javascript">function recoverRGT() nonpayable
+</code></pre>
+<blockquote>
+<p>guardian sends back RGT</p>
+</blockquote>
+<h4 id="renounceownership">renounceOwnership</h4>
+<pre><code class="language-javascript">function renounceOwnership() nonpayable
+</code></pre>
+<blockquote>
+<p>Leaves the contract without owner. It will not be possible to call <code>onlyOwner</code> functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.</p>
+</blockquote>
+<h4 id="rgt">rgt</h4>
+<pre><code class="language-javascript">function rgt() view returns(address)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="timelock">timelock</h4>
+<pre><code class="language-javascript">function timelock() view returns(address)
+</code></pre>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transferownership">transferOwnership</h4>
+<pre><code class="language-javascript">function transferOwnership(address) nonpayable
+</code></pre>
+<blockquote>
+<p>Transfers ownership of the contract to a new account (<code>newOwner</code>). Can only be called by the current owner.</p>
+</blockquote>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newOwner</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribe">tribe</h4>
+<pre><code class="language-javascript">function tribe() view returns(address)
+</code></pre>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

@@ -96,6 +96,50 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#auto_rewards_distributor_role" class="nav-link">AUTO_REWARDS_DISTRIBUTOR_ROLE</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_acceptadmin" class="nav-link">_acceptAdmin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_addmarket" class="nav-link">_addMarket</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_grantcomp" class="nav-link">_grantComp</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_setcompborrowspeed" class="nav-link">_setCompBorrowSpeed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_setcompsupplyspeed" class="nav-link">_setCompSupplySpeed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_setcontributorcompspeed" class="nav-link">_setContributorCompSpeed</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_setimplementation" class="nav-link">_setImplementation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#_setpendingadmin" class="nav-link">_setPendingAdmin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#compborrowspeeds" class="nav-link">compBorrowSpeeds</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#compsupplyspeeds" class="nav-link">compSupplySpeeds</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -107,19 +151,299 @@
 
 <h1 id="irewardsdistributoradmin">IRewardsDistributorAdmin</h1>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>AUTO_REWARDS_DISTRIBUTOR_ROLE()</li>
-<li>_acceptAdmin()</li>
-<li>_addMarket(address)</li>
-<li>_grantComp(address,uint256)</li>
-<li>_setCompBorrowSpeed(address,uint256)</li>
-<li>_setCompSupplySpeed(address,uint256)</li>
-<li>_setContributorCompSpeed(address,uint256)</li>
-<li>_setImplementation(address)</li>
-<li>_setPendingAdmin(address)</li>
-<li>compBorrowSpeeds(address)</li>
-<li>compSupplySpeeds(address)</li>
-</ul></div>
+<h4 id="auto_rewards_distributor_role">AUTO_REWARDS_DISTRIBUTOR_ROLE</h4>
+<pre><code class="language-javascript">function AUTO_REWARDS_DISTRIBUTOR_ROLE() view returns(bytes32)
+</code></pre>
+<blockquote>
+<p>Role for AutoRewardsDistributor contracts</p>
+</blockquote>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_acceptadmin">_acceptAdmin</h4>
+<pre><code class="language-javascript">function _acceptAdmin() nonpayable
+</code></pre>
+<blockquote>
+<p>Accepts transfer of admin rights. msg.sender must be pendingAdmin</p>
+<p>Admin function for pending admin to accept role and update admin</p>
+</blockquote>
+<h4 id="_addmarket">_addMarket</h4>
+<pre><code class="language-javascript">function _addMarket(address) nonpayable
+</code></pre>
+<blockquote>
+<p>Add a default market to claim rewards for in <code>claimRewards()</code></p>
+</blockquote>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cToken</td>
+<td>address</td>
+<td>The market to add</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_grantcomp">_grantComp</h4>
+<pre><code class="language-javascript">function _grantComp(address,uint256) nonpayable
+</code></pre>
+<blockquote>
+<p>Transfer COMP to the recipient</p>
+<p>Note: If there is not enough COMP, we do not perform the transfer all.</p>
+</blockquote>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recipient</td>
+<td>address</td>
+<td>The address of the recipient to transfer COMP to</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td>The amount of COMP to (possibly) transfer</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_setcompborrowspeed">_setCompBorrowSpeed</h4>
+<pre><code class="language-javascript">function _setCompBorrowSpeed(address,uint256) nonpayable
+</code></pre>
+<blockquote>
+<p>Set COMP speed for a single market</p>
+</blockquote>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cToken</td>
+<td>address</td>
+<td>The market whose COMP speed to update</td>
+</tr>
+<tr>
+<td>compSpeed</td>
+<td>uint256</td>
+<td>New COMP speed for market</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_setcompsupplyspeed">_setCompSupplySpeed</h4>
+<pre><code class="language-javascript">function _setCompSupplySpeed(address,uint256) nonpayable
+</code></pre>
+<blockquote>
+<p>Set COMP speed for a single market</p>
+</blockquote>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cToken</td>
+<td>address</td>
+<td>The market whose COMP speed to update</td>
+</tr>
+<tr>
+<td>compSpeed</td>
+<td>uint256</td>
+<td>New COMP speed for market</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_setcontributorcompspeed">_setContributorCompSpeed</h4>
+<pre><code class="language-javascript">function _setContributorCompSpeed(address,uint256) nonpayable
+</code></pre>
+<blockquote>
+<p>Set COMP speed for a single contributor</p>
+</blockquote>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>contributor</td>
+<td>address</td>
+<td>The contributor whose COMP speed to update</td>
+</tr>
+<tr>
+<td>compSpeed</td>
+<td>uint256</td>
+<td>New COMP speed for contributor</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_setimplementation">_setImplementation</h4>
+<pre><code class="language-javascript">function _setImplementation(address) nonpayable
+</code></pre>
+<blockquote>
+<p>Set logic contract address</p>
+</blockquote>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>implementation_</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="_setpendingadmin">_setPendingAdmin</h4>
+<pre><code class="language-javascript">function _setPendingAdmin(address) nonpayable
+</code></pre>
+<blockquote>
+<p>Begins transfer of admin rights. The newPendingAdmin must call <code>_acceptAdmin</code> to finalize the transfer.</p>
+<p>Admin function to begin change of admin. The newPendingAdmin must call <code>_acceptAdmin</code> to finalize the transfer.</p>
+</blockquote>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newPendingAdmin</td>
+<td>address</td>
+<td>New pending admin.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="compborrowspeeds">compBorrowSpeeds</h4>
+<pre><code class="language-javascript">function compBorrowSpeeds(address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>The portion of compRate that each market currently receives</p>
+</blockquote>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="compsupplyspeeds">compSupplySpeeds</h4>
+<pre><code class="language-javascript">function compSupplySpeeds(address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>The portion of compRate that each market currently receives</p>
+</blockquote>
+<h5 id="params_8">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

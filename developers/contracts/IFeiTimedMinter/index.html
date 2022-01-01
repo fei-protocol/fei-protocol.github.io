@@ -96,10 +96,54 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#feiminting" class="nav-link">FeiMinting</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mintamountupdate" class="nav-link">MintAmountUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#targetupdate" class="nav-link">TargetUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#max_mint_frequency" class="nav-link">MAX_MINT_FREQUENCY</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#min_mint_frequency" class="nav-link">MIN_MINT_FREQUENCY</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mint" class="nav-link">mint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mintamount" class="nav-link">mintAmount</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setfrequency" class="nav-link">setFrequency</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setmintamount" class="nav-link">setMintAmount</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#settarget" class="nav-link">setTarget</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#target" class="nav-link">target</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -115,22 +159,225 @@
 <p>Author: Fei Protocol</p>
 </blockquote>
 <h2 id="events">Events</h2>
-<ul>
-<li>FeiMinting(address,uint256)</li>
-<li>MintAmountUpdate(uint256,uint256)</li>
-<li>TargetUpdate(address,address)</li>
-</ul>
+<h4 id="feiminting">FeiMinting</h4>
+<pre><code class="language-javascript">event FeiMinting(address,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caller indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>feiAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mintamountupdate">MintAmountUpdate</h4>
+<pre><code class="language-javascript">event MintAmountUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldMintAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newMintAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="targetupdate">TargetUpdate</h4>
+<pre><code class="language-javascript">event TargetUpdate(address,address)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldTarget</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newTarget</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>MAX_MINT_FREQUENCY()</li>
-<li>MIN_MINT_FREQUENCY()</li>
-<li>mint()</li>
-<li>mintAmount()</li>
-<li>setFrequency(uint256)</li>
-<li>setMintAmount(uint256)</li>
-<li>setTarget(address)</li>
-<li>target()</li>
-</ul></div>
+<h4 id="max_mint_frequency">MAX_MINT_FREQUENCY</h4>
+<pre><code class="language-javascript">function MAX_MINT_FREQUENCY() view returns(uint256)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="min_mint_frequency">MIN_MINT_FREQUENCY</h4>
+<pre><code class="language-javascript">function MIN_MINT_FREQUENCY() view returns(uint256)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mint">mint</h4>
+<pre><code class="language-javascript">function mint() nonpayable
+</code></pre>
+<h4 id="mintamount">mintAmount</h4>
+<pre><code class="language-javascript">function mintAmount() view returns(uint256)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setfrequency">setFrequency</h4>
+<pre><code class="language-javascript">function setFrequency(uint256) nonpayable
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newFrequency</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setmintamount">setMintAmount</h4>
+<pre><code class="language-javascript">function setMintAmount(uint256) nonpayable
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newMintAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="settarget">setTarget</h4>
+<pre><code class="language-javascript">function setTarget(address) nonpayable
+</code></pre>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newTarget</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="target">target</h4>
+<pre><code class="language-javascript">function target() view returns(address)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

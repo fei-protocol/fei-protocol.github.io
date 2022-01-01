@@ -96,6 +96,18 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#cleardelegate" class="nav-link">clearDelegate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delegation" class="nav-link">delegation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setdelegate" class="nav-link">setDelegate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -107,11 +119,93 @@
 
 <h1 id="delegateregistry">DelegateRegistry</h1>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>clearDelegate(bytes32)</li>
-<li>delegation(address,bytes32)</li>
-<li>setDelegate(bytes32,address)</li>
-</ul></div>
+<h4 id="cleardelegate">clearDelegate</h4>
+<pre><code class="language-javascript">function clearDelegate(bytes32) nonpayable
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="delegation">delegation</h4>
+<pre><code class="language-javascript">function delegation(address,bytes32) view returns(address)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delegator</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>delegatee</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setdelegate">setDelegate</h4>
+<pre><code class="language-javascript">function setDelegate(bytes32,address) nonpayable
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+<tr>
+<td>delegate</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

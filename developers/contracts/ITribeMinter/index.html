@@ -96,10 +96,74 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#annualmaxinflationupdate" class="nav-link">AnnualMaxInflationUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#triberewardsdripperupdate" class="nav-link">TribeRewardsDripperUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribetreasuryupdate" class="nav-link">TribeTreasuryUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#annualmaxinflationbasispoints" class="nav-link">annualMaxInflationBasisPoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#idealbuffercap" class="nav-link">idealBufferCap</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#ispokeneeded" class="nav-link">isPokeNeeded</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#mint" class="nav-link">mint</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#poke" class="nav-link">poke</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setannualmaxinflationbasispoints" class="nav-link">setAnnualMaxInflationBasisPoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setminter" class="nav-link">setMinter</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#settriberewardsdripper" class="nav-link">setTribeRewardsDripper</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#settribetreasury" class="nav-link">setTribeTreasury</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#totalsupply" class="nav-link">totalSupply</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribecirculatingsupply" class="nav-link">tribeCirculatingSupply</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#triberewardsdripper" class="nav-link">tribeRewardsDripper</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribetreasury" class="nav-link">tribeTreasury</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -115,27 +179,330 @@
 <p>Author: Fei Protocol</p>
 </blockquote>
 <h2 id="events">Events</h2>
-<ul>
-<li>AnnualMaxInflationUpdate(uint256,uint256)</li>
-<li>TribeRewardsDripperUpdate(address,address)</li>
-<li>TribeTreasuryUpdate(address,address)</li>
-</ul>
+<h4 id="annualmaxinflationupdate">AnnualMaxInflationUpdate</h4>
+<pre><code class="language-javascript">event AnnualMaxInflationUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldAnnualMaxInflationBasisPoints</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newAnnualMaxInflationBasisPoints</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="triberewardsdripperupdate">TribeRewardsDripperUpdate</h4>
+<pre><code class="language-javascript">event TribeRewardsDripperUpdate(address,address)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldTribeRewardsDripper indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newTribeRewardsDripper indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribetreasuryupdate">TribeTreasuryUpdate</h4>
+<pre><code class="language-javascript">event TribeTreasuryUpdate(address,address)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldTribeTreasury indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newTribeTreasury indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>annualMaxInflationBasisPoints()</li>
-<li>idealBufferCap()</li>
-<li>isPokeNeeded()</li>
-<li>mint(address,uint256)</li>
-<li>poke()</li>
-<li>setAnnualMaxInflationBasisPoints(uint256)</li>
-<li>setMinter(address)</li>
-<li>setTribeRewardsDripper(address)</li>
-<li>setTribeTreasury(address)</li>
-<li>totalSupply()</li>
-<li>tribeCirculatingSupply()</li>
-<li>tribeRewardsDripper()</li>
-<li>tribeTreasury()</li>
-</ul></div>
+<h4 id="annualmaxinflationbasispoints">annualMaxInflationBasisPoints</h4>
+<pre><code class="language-javascript">function annualMaxInflationBasisPoints() view returns(uint256)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="idealbuffercap">idealBufferCap</h4>
+<pre><code class="language-javascript">function idealBufferCap() view returns(uint256)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ispokeneeded">isPokeNeeded</h4>
+<pre><code class="language-javascript">function isPokeNeeded() view returns(bool)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mint">mint</h4>
+<pre><code class="language-javascript">function mint(address,uint256) nonpayable
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="poke">poke</h4>
+<pre><code class="language-javascript">function poke() nonpayable
+</code></pre>
+<h4 id="setannualmaxinflationbasispoints">setAnnualMaxInflationBasisPoints</h4>
+<pre><code class="language-javascript">function setAnnualMaxInflationBasisPoints(uint256) nonpayable
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newAnnualMaxInflationBasisPoints</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setminter">setMinter</h4>
+<pre><code class="language-javascript">function setMinter(address) nonpayable
+</code></pre>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newMinter</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="settriberewardsdripper">setTribeRewardsDripper</h4>
+<pre><code class="language-javascript">function setTribeRewardsDripper(address) nonpayable
+</code></pre>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newTribeRewardsDripper</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="settribetreasury">setTribeTreasury</h4>
+<pre><code class="language-javascript">function setTribeTreasury(address) nonpayable
+</code></pre>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newTribeTreasury</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="totalsupply">totalSupply</h4>
+<pre><code class="language-javascript">function totalSupply() view returns(uint256)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribecirculatingsupply">tribeCirculatingSupply</h4>
+<pre><code class="language-javascript">function tribeCirculatingSupply() view returns(uint256)
+</code></pre>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="triberewardsdripper">tribeRewardsDripper</h4>
+<pre><code class="language-javascript">function tribeRewardsDripper() view returns(address)
+</code></pre>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribetreasury">tribeTreasury</h4>
+<pre><code class="language-javascript">function tribeTreasury() view returns(address)
+</code></pre>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

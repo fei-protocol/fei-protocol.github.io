@@ -96,6 +96,26 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#balanceof" class="nav-link">balanceOf</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getreward" class="nav-link">getReward</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#stake" class="nav-link">stake</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#stakingtoken" class="nav-link">stakingToken</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#withdraw" class="nav-link">withdraw</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -107,13 +127,106 @@
 
 <h1 id="istakingrewards">IStakingRewards</h1>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>balanceOf(address)</li>
-<li>getReward()</li>
-<li>stake(uint256)</li>
-<li>stakingToken()</li>
-<li>withdraw(uint256)</li>
-</ul></div>
+<h4 id="balanceof">balanceOf</h4>
+<pre><code class="language-javascript">function balanceOf(address) view returns(uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getreward">getReward</h4>
+<pre><code class="language-javascript">function getReward() nonpayable
+</code></pre>
+<h4 id="stake">stake</h4>
+<pre><code class="language-javascript">function stake(uint256) nonpayable
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="stakingtoken">stakingToken</h4>
+<pre><code class="language-javascript">function stakingToken() nonpayable returns(address)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="withdraw">withdraw</h4>
+<pre><code class="language-javascript">function withdraw(uint256) nonpayable
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

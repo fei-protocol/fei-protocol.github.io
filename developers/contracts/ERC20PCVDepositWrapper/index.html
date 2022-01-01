@@ -96,6 +96,30 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#balance" class="nav-link">balance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#balancereportedin" class="nav-link">balanceReportedIn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#isprotocolfeideposit" class="nav-link">isProtocolFeiDeposit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#resistantbalanceandfei" class="nav-link">resistantBalanceAndFei</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#token" class="nav-link">token</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tokendeposit" class="nav-link">tokenDeposit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -108,14 +132,149 @@
 <h1 id="erc20pcvdepositwrapper">ERC20PCVDepositWrapper</h1>
 <p>a lightweight contract to wrap ERC20 holding PCV contracts</p>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>balance()</li>
-<li>balanceReportedIn()</li>
-<li>isProtocolFeiDeposit()</li>
-<li>resistantBalanceAndFei()</li>
-<li>token()</li>
-<li>tokenDeposit()</li>
-</ul></div>
+<h4 id="balance">balance</h4>
+<pre><code class="language-javascript">function balance() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>returns total balance of PCV in the Deposit</p>
+</blockquote>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="balancereportedin">balanceReportedIn</h4>
+<pre><code class="language-javascript">function balanceReportedIn() view returns(address)
+</code></pre>
+<blockquote>
+<p>display the related token of the balance reported</p>
+</blockquote>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="isprotocolfeideposit">isProtocolFeiDeposit</h4>
+<pre><code class="language-javascript">function isProtocolFeiDeposit() view returns(bool)
+</code></pre>
+<blockquote>
+<p>a flag for whether to report the balance as protocol owned FEI</p>
+</blockquote>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="resistantbalanceandfei">resistantBalanceAndFei</h4>
+<pre><code class="language-javascript">function resistantBalanceAndFei() view returns(uint256,uint256)
+</code></pre>
+<blockquote>
+<p>returns the resistant balance and FEI in the deposit</p>
+</blockquote>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="token">token</h4>
+<pre><code class="language-javascript">function token() view returns(address)
+</code></pre>
+<blockquote>
+<p>the balance reported in token</p>
+</blockquote>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tokendeposit">tokenDeposit</h4>
+<pre><code class="language-javascript">function tokenDeposit() view returns(address)
+</code></pre>
+<blockquote>
+<p>the referenced token deposit</p>
+</blockquote>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

@@ -96,10 +96,58 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#dripamountupdate" class="nav-link">DripAmountUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#dripped" class="nav-link">Dripped</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#sourceupdate" class="nav-link">SourceUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#targetupdate" class="nav-link">TargetUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#drip" class="nav-link">drip</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#dripamount" class="nav-link">dripAmount</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#dripeligible" class="nav-link">dripEligible</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setdripamount" class="nav-link">setDripAmount</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setsource" class="nav-link">setSource</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#settarget" class="nav-link">setTarget</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#source" class="nav-link">source</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#target" class="nav-link">target</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -115,23 +163,255 @@
 <p>Author: Fei Protocol</p>
 </blockquote>
 <h2 id="events">Events</h2>
-<ul>
-<li>DripAmountUpdate(uint256,uint256)</li>
-<li>Dripped(address,address,uint256)</li>
-<li>SourceUpdate(address,address)</li>
-<li>TargetUpdate(address,address)</li>
-</ul>
+<h4 id="dripamountupdate">DripAmountUpdate</h4>
+<pre><code class="language-javascript">event DripAmountUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldDripAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newDripAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dripped">Dripped</h4>
+<pre><code class="language-javascript">event Dripped(address,address,uint256)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>target indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="sourceupdate">SourceUpdate</h4>
+<pre><code class="language-javascript">event SourceUpdate(address,address)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldSource indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newSource indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="targetupdate">TargetUpdate</h4>
+<pre><code class="language-javascript">event TargetUpdate(address,address)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldTarget indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newTarget indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>drip()</li>
-<li>dripAmount()</li>
-<li>dripEligible()</li>
-<li>setDripAmount(uint256)</li>
-<li>setSource(address)</li>
-<li>setTarget(address)</li>
-<li>source()</li>
-<li>target()</li>
-</ul></div>
+<h4 id="drip">drip</h4>
+<pre><code class="language-javascript">function drip() nonpayable
+</code></pre>
+<h4 id="dripamount">dripAmount</h4>
+<pre><code class="language-javascript">function dripAmount() view returns(uint256)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="dripeligible">dripEligible</h4>
+<pre><code class="language-javascript">function dripEligible() view returns(bool)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setdripamount">setDripAmount</h4>
+<pre><code class="language-javascript">function setDripAmount(uint256) nonpayable
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newDripAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setsource">setSource</h4>
+<pre><code class="language-javascript">function setSource(address) nonpayable
+</code></pre>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newSource</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="settarget">setTarget</h4>
+<pre><code class="language-javascript">function setTarget(address) nonpayable
+</code></pre>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newTarget</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="source">source</h4>
+<pre><code class="language-javascript">function source() view returns(address)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="target">target</h4>
+<pre><code class="language-javascript">function target() view returns(address)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

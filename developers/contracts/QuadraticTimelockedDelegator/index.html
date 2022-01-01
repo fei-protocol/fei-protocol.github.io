@@ -96,10 +96,118 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#beneficiaryupdate" class="nav-link">BeneficiaryUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#durationupdate" class="nav-link">DurationUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pendingbeneficiaryupdate" class="nav-link">PendingBeneficiaryUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#release" class="nav-link">Release</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#timerreset" class="nav-link">TimerReset</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#acceptbeneficiary" class="nav-link">acceptBeneficiary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#alreadyreleasedamount" class="nav-link">alreadyReleasedAmount</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#availableforrelease" class="nav-link">availableForRelease</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#beneficiary" class="nav-link">beneficiary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#clawback" class="nav-link">clawback</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#clawbackadmin" class="nav-link">clawbackAdmin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#cliffseconds" class="nav-link">cliffSeconds</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delegate" class="nav-link">delegate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#duration" class="nav-link">duration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#initialbalance" class="nav-link">initialBalance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#istimeended" class="nav-link">isTimeEnded</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#istimestarted" class="nav-link">isTimeStarted</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#lockedtoken" class="nav-link">lockedToken</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#passedcliff" class="nav-link">passedCliff</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pendingbeneficiary" class="nav-link">pendingBeneficiary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#release_1" class="nav-link">release</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#releasemax" class="nav-link">releaseMax</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#remainingtime" class="nav-link">remainingTime</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setpendingbeneficiary" class="nav-link">setPendingBeneficiary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#starttime" class="nav-link">startTime</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#timesincestart" class="nav-link">timeSinceStart</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#totaltoken" class="nav-link">totalToken</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -116,38 +224,588 @@
 </blockquote>
 <p>allows the timelocked tokens to be delegated by the beneficiary while locked</p>
 <h2 id="events">Events</h2>
-<ul>
-<li>BeneficiaryUpdate(address)</li>
-<li>DurationUpdate(uint256,uint256)</li>
-<li>PendingBeneficiaryUpdate(address)</li>
-<li>Release(address,address,uint256)</li>
-<li>TimerReset(uint256)</li>
-</ul>
+<h4 id="beneficiaryupdate">BeneficiaryUpdate</h4>
+<pre><code class="language-javascript">event BeneficiaryUpdate(address)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_beneficiary indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="durationupdate">DurationUpdate</h4>
+<pre><code class="language-javascript">event DurationUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldDuration</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newDuration</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pendingbeneficiaryupdate">PendingBeneficiaryUpdate</h4>
+<pre><code class="language-javascript">event PendingBeneficiaryUpdate(address)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_pendingBeneficiary indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="release">Release</h4>
+<pre><code class="language-javascript">event Release(address,address,uint256)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_beneficiary indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_recipient indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="timerreset">TimerReset</h4>
+<pre><code class="language-javascript">event TimerReset(uint256)
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>startTime</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>acceptBeneficiary()</li>
-<li>alreadyReleasedAmount()</li>
-<li>availableForRelease()</li>
-<li>beneficiary()</li>
-<li>clawback()</li>
-<li>clawbackAdmin()</li>
-<li>cliffSeconds()</li>
-<li>delegate(address)</li>
-<li>duration()</li>
-<li>initialBalance()</li>
-<li>isTimeEnded()</li>
-<li>isTimeStarted()</li>
-<li>lockedToken()</li>
-<li>passedCliff()</li>
-<li>pendingBeneficiary()</li>
-<li>release(address,uint256)</li>
-<li>releaseMax(address)</li>
-<li>remainingTime()</li>
-<li>setPendingBeneficiary(address)</li>
-<li>startTime()</li>
-<li>timeSinceStart()</li>
-<li>totalToken()</li>
-</ul></div>
+<h4 id="acceptbeneficiary">acceptBeneficiary</h4>
+<pre><code class="language-javascript">function acceptBeneficiary() nonpayable
+</code></pre>
+<blockquote>
+<p>accept beneficiary role over timelocked TRIBE</p>
+</blockquote>
+<h4 id="alreadyreleasedamount">alreadyReleasedAmount</h4>
+<pre><code class="language-javascript">function alreadyReleasedAmount() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>amount of tokens released to beneficiary</p>
+</blockquote>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="availableforrelease">availableForRelease</h4>
+<pre><code class="language-javascript">function availableForRelease() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>amount of held tokens unlocked and available for release</p>
+</blockquote>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beneficiary">beneficiary</h4>
+<pre><code class="language-javascript">function beneficiary() view returns(address)
+</code></pre>
+<blockquote>
+<p>beneficiary of tokens after they are released</p>
+</blockquote>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="clawback">clawback</h4>
+<pre><code class="language-javascript">function clawback() nonpayable
+</code></pre>
+<h4 id="clawbackadmin">clawbackAdmin</h4>
+<pre><code class="language-javascript">function clawbackAdmin() view returns(address)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="cliffseconds">cliffSeconds</h4>
+<pre><code class="language-javascript">function cliffSeconds() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>number of seconds before releasing is allowed</p>
+</blockquote>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="delegate">delegate</h4>
+<pre><code class="language-javascript">function delegate(address) nonpayable
+</code></pre>
+<blockquote>
+<p>delegate all held TRIBE to the <code>to</code> address</p>
+</blockquote>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="duration">duration</h4>
+<pre><code class="language-javascript">function duration() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>the duration of the timed period</p>
+</blockquote>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="initialbalance">initialBalance</h4>
+<pre><code class="language-javascript">function initialBalance() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>initial balance of lockedToken</p>
+</blockquote>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="istimeended">isTimeEnded</h4>
+<pre><code class="language-javascript">function isTimeEnded() view returns(bool)
+</code></pre>
+<blockquote>
+<p>return true if time period has ended</p>
+</blockquote>
+<h5 id="returns_7">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="istimestarted">isTimeStarted</h4>
+<pre><code class="language-javascript">function isTimeStarted() view returns(bool)
+</code></pre>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="lockedtoken">lockedToken</h4>
+<pre><code class="language-javascript">function lockedToken() view returns(address)
+</code></pre>
+<blockquote>
+<p>ERC20 basic token contract being held in timelock</p>
+</blockquote>
+<h5 id="returns_9">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="passedcliff">passedCliff</h4>
+<pre><code class="language-javascript">function passedCliff() view returns(bool)
+</code></pre>
+<h5 id="returns_10">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pendingbeneficiary">pendingBeneficiary</h4>
+<pre><code class="language-javascript">function pendingBeneficiary() view returns(address)
+</code></pre>
+<blockquote>
+<p>pending beneficiary appointed by current beneficiary</p>
+</blockquote>
+<h5 id="returns_11">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="release_1">release</h4>
+<pre><code class="language-javascript">function release(address,uint256) nonpayable
+</code></pre>
+<blockquote>
+<p>releases <code>amount</code> unlocked tokens to address <code>to</code></p>
+</blockquote>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="releasemax">releaseMax</h4>
+<pre><code class="language-javascript">function releaseMax(address) nonpayable
+</code></pre>
+<blockquote>
+<p>releases maximum unlocked tokens to address <code>to</code></p>
+</blockquote>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="remainingtime">remainingTime</h4>
+<pre><code class="language-javascript">function remainingTime() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>number of seconds remaining until time is up</p>
+</blockquote>
+<h5 id="returns_12">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setpendingbeneficiary">setPendingBeneficiary</h4>
+<pre><code class="language-javascript">function setPendingBeneficiary(address) nonpayable
+</code></pre>
+<blockquote>
+<p>current beneficiary can appoint new beneficiary, which must be accepted</p>
+</blockquote>
+<h5 id="params_8">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_pendingBeneficiary</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="starttime">startTime</h4>
+<pre><code class="language-javascript">function startTime() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>the start timestamp of the timed period</p>
+</blockquote>
+<h5 id="returns_13">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="timesincestart">timeSinceStart</h4>
+<pre><code class="language-javascript">function timeSinceStart() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>number of seconds since contract was initialized</p>
+<p>will be less than or equal to duration</p>
+</blockquote>
+<h5 id="returns_14">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="totaltoken">totalToken</h4>
+<pre><code class="language-javascript">function totalToken() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>the total amount of tokens held by timelock</p>
+</blockquote>
+<h5 id="returns_15">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

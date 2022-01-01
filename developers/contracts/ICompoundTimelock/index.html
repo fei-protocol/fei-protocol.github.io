@@ -96,6 +96,58 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#grace_period" class="nav-link">GRACE_PERIOD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#maximum_delay" class="nav-link">MAXIMUM_DELAY</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#minimum_delay" class="nav-link">MINIMUM_DELAY</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#acceptadmin" class="nav-link">acceptAdmin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#admin" class="nav-link">admin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#canceltransaction" class="nav-link">cancelTransaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delay" class="nav-link">delay</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#executetransaction" class="nav-link">executeTransaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pendingadmin" class="nav-link">pendingAdmin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#queuetransaction" class="nav-link">queueTransaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#queuedtransactions" class="nav-link">queuedTransactions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setdelay" class="nav-link">setDelay</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setpendingadmin" class="nav-link">setPendingAdmin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -108,21 +160,360 @@
 <h1 id="icompoundtimelock">ICompoundTimelock</h1>
 <p>https://github.com/compound-finance/compound-protocol/blob/master/contracts/Timelock.sol[Compound's timelock] interface</p>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>GRACE_PERIOD()</li>
-<li>MAXIMUM_DELAY()</li>
-<li>MINIMUM_DELAY()</li>
-<li>acceptAdmin()</li>
-<li>admin()</li>
-<li>cancelTransaction(address,uint256,string,bytes,uint256)</li>
-<li>delay()</li>
-<li>executeTransaction(address,uint256,string,bytes,uint256)</li>
-<li>pendingAdmin()</li>
-<li>queueTransaction(address,uint256,string,bytes,uint256)</li>
-<li>queuedTransactions(bytes32)</li>
-<li>setDelay(uint256)</li>
-<li>setPendingAdmin(address)</li>
-</ul></div>
+<h4 id="grace_period">GRACE_PERIOD</h4>
+<pre><code class="language-javascript">function GRACE_PERIOD() view returns(uint256)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="maximum_delay">MAXIMUM_DELAY</h4>
+<pre><code class="language-javascript">function MAXIMUM_DELAY() view returns(uint256)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="minimum_delay">MINIMUM_DELAY</h4>
+<pre><code class="language-javascript">function MINIMUM_DELAY() view returns(uint256)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="acceptadmin">acceptAdmin</h4>
+<pre><code class="language-javascript">function acceptAdmin() nonpayable
+</code></pre>
+<h4 id="admin">admin</h4>
+<pre><code class="language-javascript">function admin() view returns(address)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="canceltransaction">cancelTransaction</h4>
+<pre><code class="language-javascript">function cancelTransaction(address,uint256,string,bytes,uint256) nonpayable
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>signature</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>bytes</td>
+<td></td>
+</tr>
+<tr>
+<td>eta</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="delay">delay</h4>
+<pre><code class="language-javascript">function delay() view returns(uint256)
+</code></pre>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="executetransaction">executeTransaction</h4>
+<pre><code class="language-javascript">function executeTransaction(address,uint256,string,bytes,uint256) payable returns(bytes)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>signature</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>bytes</td>
+<td></td>
+</tr>
+<tr>
+<td>eta</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pendingadmin">pendingAdmin</h4>
+<pre><code class="language-javascript">function pendingAdmin() view returns(address)
+</code></pre>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="queuetransaction">queueTransaction</h4>
+<pre><code class="language-javascript">function queueTransaction(address,uint256,string,bytes,uint256) nonpayable returns(bytes32)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>signature</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>bytes</td>
+<td></td>
+</tr>
+<tr>
+<td>eta</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_7">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="queuedtransactions">queuedTransactions</h4>
+<pre><code class="language-javascript">function queuedTransactions(bytes32) view returns(bool)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setdelay">setDelay</h4>
+<pre><code class="language-javascript">function setDelay(uint256) nonpayable
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setpendingadmin">setPendingAdmin</h4>
+<pre><code class="language-javascript">function setPendingAdmin(address) nonpayable
+</code></pre>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

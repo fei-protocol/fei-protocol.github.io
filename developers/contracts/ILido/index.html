@@ -96,6 +96,42 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#decreaseallowance" class="nav-link">decreaseAllowance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getfee" class="nav-link">getFee</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getpooledethbyshares" class="nav-link">getPooledEthByShares</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#getsharesbypooledeth" class="nav-link">getSharesByPooledEth</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#gettotalpooledether" class="nav-link">getTotalPooledEther</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#gettotalshares" class="nav-link">getTotalShares</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#increaseallowance" class="nav-link">increaseAllowance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#sharesof" class="nav-link">sharesOf</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#submit" class="nav-link">submit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -107,17 +143,298 @@
 
 <h1 id="ilido">ILido</h1>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>decreaseAllowance(address,uint256)</li>
-<li>getFee()</li>
-<li>getPooledEthByShares(uint256)</li>
-<li>getSharesByPooledEth(uint256)</li>
-<li>getTotalPooledEther()</li>
-<li>getTotalShares()</li>
-<li>increaseAllowance(address,uint256)</li>
-<li>sharesOf(address)</li>
-<li>submit(address)</li>
-</ul></div>
+<h4 id="decreaseallowance">decreaseAllowance</h4>
+<pre><code class="language-javascript">function decreaseAllowance(address,uint256) nonpayable returns(bool)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_spender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_subtractedValue</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getfee">getFee</h4>
+<pre><code class="language-javascript">function getFee() view returns(uint256)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getpooledethbyshares">getPooledEthByShares</h4>
+<pre><code class="language-javascript">function getPooledEthByShares(uint256) view returns(uint256)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_sharesAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="getsharesbypooledeth">getSharesByPooledEth</h4>
+<pre><code class="language-javascript">function getSharesByPooledEth(uint256) view returns(uint256)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_ethAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="gettotalpooledether">getTotalPooledEther</h4>
+<pre><code class="language-javascript">function getTotalPooledEther() view returns(uint256)
+</code></pre>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="gettotalshares">getTotalShares</h4>
+<pre><code class="language-javascript">function getTotalShares() view returns(uint256)
+</code></pre>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="increaseallowance">increaseAllowance</h4>
+<pre><code class="language-javascript">function increaseAllowance(address,uint256) nonpayable returns(bool)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_spender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>_addedValue</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="sharesof">sharesOf</h4>
+<pre><code class="language-javascript">function sharesOf(address) view returns(uint256)
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_account</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_7">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="submit">submit</h4>
+<pre><code class="language-javascript">function submit(address) payable returns(uint256)
+</code></pre>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>referral</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

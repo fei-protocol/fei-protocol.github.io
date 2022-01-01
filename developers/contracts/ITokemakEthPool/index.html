@@ -96,6 +96,14 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#deposit" class="nav-link">deposit</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#withdraw" class="nav-link">withdraw</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -107,10 +115,51 @@
 
 <h1 id="itokemakethpool">ITokemakEthPool</h1>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>deposit(uint256)</li>
-<li>withdraw(uint256,bool)</li>
-</ul></div>
+<h4 id="deposit">deposit</h4>
+<pre><code class="language-javascript">function deposit(uint256) payable
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="withdraw">withdraw</h4>
+<pre><code class="language-javascript">function withdraw(uint256,bool) nonpayable
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>requestedAmount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>asEth</td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

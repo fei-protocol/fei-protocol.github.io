@@ -96,6 +96,34 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#addpool" class="nav-link">addPool</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#autorewardsdistributor" class="nav-link">autoRewardsDistributor</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#decreaserewards" class="nav-link">decreaseRewards</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#resetpool" class="nav-link">resetPool</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setpool" class="nav-link">setPool</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#timelock" class="nav-link">timelock</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribalchief" class="nav-link">tribalChief</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -110,15 +138,208 @@
 <p>TribalChief Synchronize contract This contract is able to keep the tribalChief and autoRewardsDistributor in sync when either: 1. adding pools or  2. updating block rewards It needs the EXECUTOR role on the optimistic timelock, so it can atomically trigger the 3 actions</p>
 </blockquote>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>addPool(uint120,address,address,(uint128,uint128)[],bytes32)</li>
-<li>autoRewardsDistributor()</li>
-<li>decreaseRewards(uint256,bytes32)</li>
-<li>resetPool(uint256,bytes32)</li>
-<li>setPool(uint256,uint120,address,bool,bytes32)</li>
-<li>timelock()</li>
-<li>tribalChief()</li>
-</ul></div>
+<h4 id="addpool">addPool</h4>
+<pre><code class="language-javascript">function addPool(uint120,address,address,(uint128,uint128)[],bytes32) nonpayable
+</code></pre>
+<blockquote>
+<p>Sync a pool addition</p>
+</blockquote>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allocPoint</td>
+<td>uint120</td>
+<td></td>
+</tr>
+<tr>
+<td>stakedToken</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>rewarder</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>rewardData</td>
+<td>tuple[]</td>
+<td></td>
+</tr>
+<tr>
+<td>salt</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="autorewardsdistributor">autoRewardsDistributor</h4>
+<pre><code class="language-javascript">function autoRewardsDistributor() view returns(address)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="decreaserewards">decreaseRewards</h4>
+<pre><code class="language-javascript">function decreaseRewards(uint256,bytes32) nonpayable
+</code></pre>
+<blockquote>
+<p>Sync a rewards rate change</p>
+</blockquote>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tribePerBlock</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>salt</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="resetpool">resetPool</h4>
+<pre><code class="language-javascript">function resetPool(uint256,bytes32) nonpayable
+</code></pre>
+<blockquote>
+<p>Sync a pool reset rewards action</p>
+</blockquote>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pid</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>salt</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setpool">setPool</h4>
+<pre><code class="language-javascript">function setPool(uint256,uint120,address,bool,bytes32) nonpayable
+</code></pre>
+<blockquote>
+<p>Sync a pool set action</p>
+</blockquote>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pid</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>allocPoint</td>
+<td>uint120</td>
+<td></td>
+</tr>
+<tr>
+<td>rewarder</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>overwrite</td>
+<td>bool</td>
+<td></td>
+</tr>
+<tr>
+<td>salt</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="timelock">timelock</h4>
+<pre><code class="language-javascript">function timelock() view returns(address)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribalchief">tribalChief</h4>
+<pre><code class="language-javascript">function tribalChief() view returns(address)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

@@ -96,10 +96,34 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#update" class="nav-link">Update</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#isoutdated" class="nav-link">isOutdated</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#isovercollateralized" class="nav-link">isOvercollateralized</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pcvstats" class="nav-link">pcvStats</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#read" class="nav-link">read</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#update_1" class="nav-link">update</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -115,17 +139,130 @@
 <p>Author: Fei Protocol</p>
 </blockquote>
 <h2 id="events">Events</h2>
-<ul>
-<li>Update(uint256)</li>
-</ul>
+<h4 id="update">Update</h4>
+<pre><code class="language-javascript">event Update(uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_peg</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>isOutdated()</li>
-<li>isOvercollateralized()</li>
-<li>pcvStats()</li>
-<li>read()</li>
-<li>update()</li>
-</ul></div>
+<h4 id="isoutdated">isOutdated</h4>
+<pre><code class="language-javascript">function isOutdated() view returns(bool)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="isovercollateralized">isOvercollateralized</h4>
+<pre><code class="language-javascript">function isOvercollateralized() view returns(bool)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pcvstats">pcvStats</h4>
+<pre><code class="language-javascript">function pcvStats() view returns(uint256,uint256,int256,bool)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>protocolControlledValue</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>userCirculatingFei</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>protocolEquity</td>
+<td>int256</td>
+<td></td>
+</tr>
+<tr>
+<td>validityStatus</td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="read">read</h4>
+<pre><code class="language-javascript">function read() view returns(tuple,bool)
+</code></pre>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>tuple</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="update_1">update</h4>
+<pre><code class="language-javascript">function update() nonpayable
+</code></pre></div>
             </div>
         </div>
 

@@ -96,10 +96,38 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#aprupdate" class="nav-link">APRUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#collateralizationoracleupdate" class="nav-link">CollateralizationOracleUpdate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#max_apr_basis_points" class="nav-link">MAX_APR_BASIS_POINTS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#aprbasispoints" class="nav-link">aprBasisPoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#collateralizationoracle" class="nav-link">collateralizationOracle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setaprbasispoints" class="nav-link">setAPRBasisPoints</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setcollateralizationoracle" class="nav-link">setCollateralizationOracle</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -115,18 +143,157 @@
 <p>Author: Fei Protocol</p>
 </blockquote>
 <h2 id="events">Events</h2>
-<ul>
-<li>APRUpdate(uint256,uint256)</li>
-<li>CollateralizationOracleUpdate(address,address)</li>
-</ul>
+<h4 id="aprupdate">APRUpdate</h4>
+<pre><code class="language-javascript">event APRUpdate(uint256,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldAprBasisPoints</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>newAprBasisPoints</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="collateralizationoracleupdate">CollateralizationOracleUpdate</h4>
+<pre><code class="language-javascript">event CollateralizationOracleUpdate(address,address)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>oldCollateralizationOracle</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>newCollateralizationOracle</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>MAX_APR_BASIS_POINTS()</li>
-<li>aprBasisPoints()</li>
-<li>collateralizationOracle()</li>
-<li>setAPRBasisPoints(uint256)</li>
-<li>setCollateralizationOracle(address)</li>
-</ul></div>
+<h4 id="max_apr_basis_points">MAX_APR_BASIS_POINTS</h4>
+<pre><code class="language-javascript">function MAX_APR_BASIS_POINTS() view returns(uint256)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="aprbasispoints">aprBasisPoints</h4>
+<pre><code class="language-javascript">function aprBasisPoints() view returns(uint256)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="collateralizationoracle">collateralizationOracle</h4>
+<pre><code class="language-javascript">function collateralizationOracle() view returns(address)
+</code></pre>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setaprbasispoints">setAPRBasisPoints</h4>
+<pre><code class="language-javascript">function setAPRBasisPoints(uint256) nonpayable
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newAprBasisPoints</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setcollateralizationoracle">setCollateralizationOracle</h4>
+<pre><code class="language-javascript">function setCollateralizationOracle(address) nonpayable
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newCollateralizationOracle</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

@@ -96,10 +96,82 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#approval" class="nav-link">Approval</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transfer" class="nav-link">Transfer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#allowance" class="nav-link">allowance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#approve" class="nav-link">approve</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#balanceof" class="nav-link">balanceOf</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#beneficiary" class="nav-link">beneficiary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#decimals" class="nav-link">decimals</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#decreaseallowance" class="nav-link">decreaseAllowance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#harvest" class="nav-link">harvest</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#increaseallowance" class="nav-link">increaseAllowance</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#init" class="nav-link">init</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#name" class="nav-link">name</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pid" class="nav-link">pid</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#symbol" class="nav-link">symbol</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#totalsupply" class="nav-link">totalSupply</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transfer_1" class="nav-link">transfer</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#transferfrom" class="nav-link">transferFrom</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#tribalchief" class="nav-link">tribalChief</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -115,29 +187,572 @@
 </blockquote>
 <p>Allows the TribalChief to distribute TRIBE to a beneficiary contract  The beneficiary is the sole holder of a dummy token staked in the TribalChief</p>
 <h2 id="events">Events</h2>
-<ul>
-<li>Approval(address,address,uint256)</li>
-<li>Transfer(address,address,uint256)</li>
-</ul>
+<h4 id="approval">Approval</h4>
+<pre><code class="language-javascript">event Approval(address,address,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>spender indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transfer">Transfer</h4>
+<pre><code class="language-javascript">event Transfer(address,address,uint256)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>from indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>to indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>allowance(address,address)</li>
-<li>approve(address,uint256)</li>
-<li>balanceOf(address)</li>
-<li>beneficiary()</li>
-<li>decimals()</li>
-<li>decreaseAllowance(address,uint256)</li>
-<li>harvest()</li>
-<li>increaseAllowance(address,uint256)</li>
-<li>init(uint256)</li>
-<li>name()</li>
-<li>pid()</li>
-<li>symbol()</li>
-<li>totalSupply()</li>
-<li>transfer(address,uint256)</li>
-<li>transferFrom(address,address,uint256)</li>
-<li>tribalChief()</li>
-</ul></div>
+<h4 id="allowance">allowance</h4>
+<pre><code class="language-javascript">function allowance(address,address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>See {IERC20-allowance}.</p>
+</blockquote>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>owner</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="approve">approve</h4>
+<pre><code class="language-javascript">function approve(address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>See {IERC20-approve}. Requirements: - <code>spender</code> cannot be the zero address.</p>
+</blockquote>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="balanceof">balanceOf</h4>
+<pre><code class="language-javascript">function balanceOf(address) view returns(uint256)
+</code></pre>
+<blockquote>
+<p>See {IERC20-balanceOf}.</p>
+</blockquote>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>account</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="beneficiary">beneficiary</h4>
+<pre><code class="language-javascript">function beneficiary() view returns(address)
+</code></pre>
+<blockquote>
+<p>the recipient of all harvested TRIBE</p>
+</blockquote>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="decimals">decimals</h4>
+<pre><code class="language-javascript">function decimals() view returns(uint8)
+</code></pre>
+<blockquote>
+<p>Returns the number of decimals used to get its user representation. For example, if <code>decimals</code> equals <code>2</code>, a balance of <code>505</code> tokens should be displayed to a user as <code>5.05</code> (<code>505 / 10 ** 2</code>). Tokens usually opt for a value of 18, imitating the relationship between Ether and Wei. This is the value {ERC20} uses, unless this function is overridden; NOTE: This information is only used for <em>display</em> purposes: it in no way affects any of the arithmetic of the contract, including {IERC20-balanceOf} and {IERC20-transfer}.</p>
+</blockquote>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint8</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="decreaseallowance">decreaseAllowance</h4>
+<pre><code class="language-javascript">function decreaseAllowance(address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>Atomically decreases the allowance granted to <code>spender</code> by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - <code>spender</code> cannot be the zero address. - <code>spender</code> must have allowance for the caller of at least <code>subtractedValue</code>.</p>
+</blockquote>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>subtractedValue</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_5">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="harvest">harvest</h4>
+<pre><code class="language-javascript">function harvest() nonpayable
+</code></pre>
+<blockquote>
+<p>send rewards to the beneficiary</p>
+</blockquote>
+<h4 id="increaseallowance">increaseAllowance</h4>
+<pre><code class="language-javascript">function increaseAllowance(address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>Atomically increases the allowance granted to <code>spender</code> by the caller. This is an alternative to {approve} that can be used as a mitigation for problems described in {IERC20-approve}. Emits an {Approval} event indicating the updated allowance. Requirements: - <code>spender</code> cannot be the zero address.</p>
+</blockquote>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>addedValue</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_6">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="init">init</h4>
+<pre><code class="language-javascript">function init(uint256) nonpayable
+</code></pre>
+<blockquote>
+<p>initialize the pool with this token as the sole staker</p>
+</blockquote>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_pid</td>
+<td>uint256</td>
+<td>the pool id of the staking pool associated with this token</td>
+</tr>
+</tbody>
+</table>
+<h4 id="name">name</h4>
+<pre><code class="language-javascript">function name() view returns(string)
+</code></pre>
+<blockquote>
+<p>Returns the name of the token.</p>
+</blockquote>
+<h5 id="returns_7">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pid">pid</h4>
+<pre><code class="language-javascript">function pid() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>the pool id of the corresponding pool in the TribalChief</p>
+</blockquote>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="symbol">symbol</h4>
+<pre><code class="language-javascript">function symbol() view returns(string)
+</code></pre>
+<blockquote>
+<p>Returns the symbol of the token, usually a shorter version of the name.</p>
+</blockquote>
+<h5 id="returns_9">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="totalsupply">totalSupply</h4>
+<pre><code class="language-javascript">function totalSupply() view returns(uint256)
+</code></pre>
+<blockquote>
+<p>See {IERC20-totalSupply}.</p>
+</blockquote>
+<h5 id="returns_10">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transfer_1">transfer</h4>
+<pre><code class="language-javascript">function transfer(address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>See {IERC20-transfer}. Requirements: - <code>recipient</code> cannot be the zero address. - the caller must have a balance of at least <code>amount</code>.</p>
+</blockquote>
+<h5 id="params_8">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recipient</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_11">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="transferfrom">transferFrom</h4>
+<pre><code class="language-javascript">function transferFrom(address,address,uint256) nonpayable returns(bool)
+</code></pre>
+<blockquote>
+<p>See {IERC20-transferFrom}. Emits an {Approval} event indicating the updated allowance. This is not required by the EIP. See the note at the beginning of {ERC20}. Requirements: - <code>sender</code> and <code>recipient</code> cannot be the zero address. - <code>sender</code> must have a balance of at least <code>amount</code>. - the caller must have allowance for <code>sender</code>'s tokens of at least <code>amount</code>.</p>
+</blockquote>
+<h5 id="params_9">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sender</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>recipient</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_12">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="tribalchief">tribalChief</h4>
+<pre><code class="language-javascript">function tribalChief() view returns(address)
+</code></pre>
+<blockquote>
+<p>the TribalChief staking rewards contract</p>
+</blockquote>
+<h5 id="returns_13">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

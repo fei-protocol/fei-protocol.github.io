@@ -96,6 +96,34 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#grace_period" class="nav-link">GRACE_PERIOD</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#acceptadmin" class="nav-link">acceptAdmin</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#canceltransaction" class="nav-link">cancelTransaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#delay" class="nav-link">delay</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#executetransaction" class="nav-link">executeTransaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#queuetransaction" class="nav-link">queueTransaction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#queuedtransactions" class="nav-link">queuedTransactions</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -107,15 +135,240 @@
 
 <h1 id="timelockinterface">TimelockInterface</h1>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>GRACE_PERIOD()</li>
-<li>acceptAdmin()</li>
-<li>cancelTransaction(address,uint256,string,bytes,uint256)</li>
-<li>delay()</li>
-<li>executeTransaction(address,uint256,string,bytes,uint256)</li>
-<li>queueTransaction(address,uint256,string,bytes,uint256)</li>
-<li>queuedTransactions(bytes32)</li>
-</ul></div>
+<h4 id="grace_period">GRACE_PERIOD</h4>
+<pre><code class="language-javascript">function GRACE_PERIOD() view returns(uint256)
+</code></pre>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="acceptadmin">acceptAdmin</h4>
+<pre><code class="language-javascript">function acceptAdmin() nonpayable
+</code></pre>
+<h4 id="canceltransaction">cancelTransaction</h4>
+<pre><code class="language-javascript">function cancelTransaction(address,uint256,string,bytes,uint256) nonpayable
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>signature</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>bytes</td>
+<td></td>
+</tr>
+<tr>
+<td>eta</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="delay">delay</h4>
+<pre><code class="language-javascript">function delay() view returns(uint256)
+</code></pre>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="executetransaction">executeTransaction</h4>
+<pre><code class="language-javascript">function executeTransaction(address,uint256,string,bytes,uint256) payable returns(bytes)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>signature</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>bytes</td>
+<td></td>
+</tr>
+<tr>
+<td>eta</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_2">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="queuetransaction">queueTransaction</h4>
+<pre><code class="language-javascript">function queueTransaction(address,uint256,string,bytes,uint256) nonpayable returns(bytes32)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>value</td>
+<td>uint256</td>
+<td></td>
+</tr>
+<tr>
+<td>signature</td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>bytes</td>
+<td></td>
+</tr>
+<tr>
+<td>eta</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_3">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="queuedtransactions">queuedTransactions</h4>
+<pre><code class="language-javascript">function queuedTransactions(bytes32) view returns(bool)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hash</td>
+<td>bytes32</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_4">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 

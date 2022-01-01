@@ -96,10 +96,66 @@
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#events" class="nav-link">Events</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#pcvguardianerc20withdrawal" class="nav-link">PCVGuardianERC20Withdrawal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pcvguardianethwithdrawal" class="nav-link">PCVGuardianETHWithdrawal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#pcvguardianwithdrawal" class="nav-link">PCVGuardianWithdrawal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#safeaddressadded" class="nav-link">SafeAddressAdded</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#safeaddressremoved" class="nav-link">SafeAddressRemoved</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="4"><a href="#getsafeaddresses" class="nav-link">getSafeAddresses</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#issafeaddress" class="nav-link">isSafeAddress</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setsafeaddress" class="nav-link">setSafeAddress</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#setsafeaddresses" class="nav-link">setSafeAddresses</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#unsetsafeaddress" class="nav-link">unsetSafeAddress</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#unsetsafeaddresses" class="nav-link">unsetSafeAddresses</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#withdrawerc20tosafeaddress" class="nav-link">withdrawERC20ToSafeAddress</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#withdrawethtosafeaddress" class="nav-link">withdrawETHToSafeAddress</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="4"><a href="#withdrawtosafeaddress" class="nav-link">withdrawToSafeAddress</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
               </ul>
@@ -116,25 +172,431 @@
 <p>an interface for defining how the PCVGuardian functions</p>
 <p>DEV NOTE: any implementation of this contract should be granted the roles of Guardian and PCVController in order to work correctly</p>
 <h2 id="events">Events</h2>
-<ul>
-<li>PCVGuardianERC20Withdrawal(address,address,address,uint256)</li>
-<li>PCVGuardianETHWithdrawal(address,address,uint256)</li>
-<li>PCVGuardianWithdrawal(address,address,uint256)</li>
-<li>SafeAddressAdded(address)</li>
-<li>SafeAddressRemoved(address)</li>
-</ul>
+<h4 id="pcvguardianerc20withdrawal">PCVGuardianERC20Withdrawal</h4>
+<pre><code class="language-javascript">event PCVGuardianERC20Withdrawal(address,address,address,uint256)
+</code></pre>
+<h5 id="params">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>destination indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>token indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pcvguardianethwithdrawal">PCVGuardianETHWithdrawal</h4>
+<pre><code class="language-javascript">event PCVGuardianETHWithdrawal(address,address,uint256)
+</code></pre>
+<h5 id="params_1">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>destination indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="pcvguardianwithdrawal">PCVGuardianWithdrawal</h4>
+<pre><code class="language-javascript">event PCVGuardianWithdrawal(address,address,uint256)
+</code></pre>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>destination indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="safeaddressadded">SafeAddressAdded</h4>
+<pre><code class="language-javascript">event SafeAddressAdded(address)
+</code></pre>
+<h5 id="params_3">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>safeAddress indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="safeaddressremoved">SafeAddressRemoved</h4>
+<pre><code class="language-javascript">event SafeAddressRemoved(address)
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>safeAddress indexed</td>
+<td>address</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="methods">Methods</h2>
-<ul>
-<li>getSafeAddresses()</li>
-<li>isSafeAddress(address)</li>
-<li>setSafeAddress(address)</li>
-<li>setSafeAddresses(address[])</li>
-<li>unsetSafeAddress(address)</li>
-<li>unsetSafeAddresses(address[])</li>
-<li>withdrawERC20ToSafeAddress(address,address,address,uint256,bool,bool)</li>
-<li>withdrawETHToSafeAddress(address,address,uint256,bool,bool)</li>
-<li>withdrawToSafeAddress(address,address,uint256,bool,bool)</li>
-</ul></div>
+<h4 id="getsafeaddresses">getSafeAddresses</h4>
+<pre><code class="language-javascript">function getSafeAddresses() view returns(address[])
+</code></pre>
+<blockquote>
+<p>returns all safe addresses</p>
+</blockquote>
+<h5 id="returns">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address[]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="issafeaddress">isSafeAddress</h4>
+<pre><code class="language-javascript">function isSafeAddress(address) view returns(bool)
+</code></pre>
+<blockquote>
+<p>returns true if the the provided address is a valid destination to withdraw funds to</p>
+</blockquote>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit</td>
+<td>address</td>
+<td>the address to check</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_1">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>bool</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="setsafeaddress">setSafeAddress</h4>
+<pre><code class="language-javascript">function setSafeAddress(address) nonpayable
+</code></pre>
+<blockquote>
+<p>governor-only method to set an address as "safe" to withdraw funds to</p>
+</blockquote>
+<h5 id="params_6">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit</td>
+<td>address</td>
+<td>the address to set as safe</td>
+</tr>
+</tbody>
+</table>
+<h4 id="setsafeaddresses">setSafeAddresses</h4>
+<pre><code class="language-javascript">function setSafeAddresses(address[]) nonpayable
+</code></pre>
+<blockquote>
+<p>batch version of setSafeAddress</p>
+</blockquote>
+<h5 id="params_7">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>safeAddresses</td>
+<td>address[]</td>
+<td>the addresses to set as safe, as calldata</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unsetsafeaddress">unsetSafeAddress</h4>
+<pre><code class="language-javascript">function unsetSafeAddress(address) nonpayable
+</code></pre>
+<blockquote>
+<p>governor-or-guardian-only method to un-set an address as "safe" to withdraw funds to</p>
+</blockquote>
+<h5 id="params_8">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit</td>
+<td>address</td>
+<td>the address to un-set as safe</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unsetsafeaddresses">unsetSafeAddresses</h4>
+<pre><code class="language-javascript">function unsetSafeAddresses(address[]) nonpayable
+</code></pre>
+<blockquote>
+<p>batch version of unsetSafeAddresses</p>
+</blockquote>
+<h5 id="params_9">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>safeAddresses</td>
+<td>address[]</td>
+<td>the addresses to un-set as safe</td>
+</tr>
+</tbody>
+</table>
+<h4 id="withdrawerc20tosafeaddress">withdrawERC20ToSafeAddress</h4>
+<pre><code class="language-javascript">function withdrawERC20ToSafeAddress(address,address,address,uint256,bool,bool) nonpayable
+</code></pre>
+<blockquote>
+<p>governor-or-guardian-only method to withdraw funds from a pcv deposit, by calling the withdraw() method on it</p>
+</blockquote>
+<h5 id="params_10">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit</td>
+<td>address</td>
+<td>the deposit to pull funds from</td>
+</tr>
+<tr>
+<td>safeAddress</td>
+<td>address</td>
+<td>the destination address to withdraw to</td>
+</tr>
+<tr>
+<td>token</td>
+<td>address</td>
+<td>the token to withdraw</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td>the amount of funds to withdraw</td>
+</tr>
+<tr>
+<td>pauseAfter</td>
+<td>bool</td>
+<td>whether to pause the pcv after withdrawing</td>
+</tr>
+<tr>
+<td>depositAfter</td>
+<td>bool</td>
+<td>if true, attempts to deposit to the target PCV deposit</td>
+</tr>
+</tbody>
+</table>
+<h4 id="withdrawethtosafeaddress">withdrawETHToSafeAddress</h4>
+<pre><code class="language-javascript">function withdrawETHToSafeAddress(address,address,uint256,bool,bool) nonpayable
+</code></pre>
+<blockquote>
+<p>governor-or-guardian-only method to withdraw funds from a pcv deposit, by calling the withdraw() method on it</p>
+</blockquote>
+<h5 id="params_11">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit</td>
+<td>address</td>
+<td>the address of the pcv deposit contract</td>
+</tr>
+<tr>
+<td>safeAddress</td>
+<td>address</td>
+<td>the destination address to withdraw to</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td>the amount of tokens to withdraw</td>
+</tr>
+<tr>
+<td>pauseAfter</td>
+<td>bool</td>
+<td>if true, the pcv contract will be paused after the withdraw</td>
+</tr>
+<tr>
+<td>depositAfter</td>
+<td>bool</td>
+<td>if true, attempts to deposit to the target PCV deposit</td>
+</tr>
+</tbody>
+</table>
+<h4 id="withdrawtosafeaddress">withdrawToSafeAddress</h4>
+<pre><code class="language-javascript">function withdrawToSafeAddress(address,address,uint256,bool,bool) nonpayable
+</code></pre>
+<blockquote>
+<p>governor-or-guardian-only method to withdraw funds from a pcv deposit, by calling the withdraw() method on it</p>
+</blockquote>
+<h5 id="params_12">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pcvDeposit</td>
+<td>address</td>
+<td>the address of the pcv deposit contract</td>
+</tr>
+<tr>
+<td>safeAddress</td>
+<td>address</td>
+<td>the destination address to withdraw to</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>uint256</td>
+<td>the amount to withdraw</td>
+</tr>
+<tr>
+<td>pauseAfter</td>
+<td>bool</td>
+<td>if true, the pcv contract will be paused after the withdraw</td>
+</tr>
+<tr>
+<td>depositAfter</td>
+<td>bool</td>
+<td>if true, attempts to deposit to the target PCV deposit</td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 
