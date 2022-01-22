@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Unitroller - Fei Protocol Docs</title>
+        <title>RestrictedPermissions - Fei Protocol Docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -72,7 +72,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/fei-protocol/fei-docs/edit/main/docs/developers/contracts/Unitroller.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/fei-protocol/fei-docs/edit/main/docs/developers/contracts/RestrictedPermissions.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -92,7 +92,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#unitroller" class="nav-link">Unitroller</a>
+            <li class="nav-item" data-level="1"><a href="#restrictedpermissions" class="nav-link">RestrictedPermissions</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#mainnet-implementations" class="nav-link">Mainnet implementations</a>
               <ul class="nav flex-column">
@@ -104,59 +104,27 @@
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="4"><a href="#_acceptadmin" class="nav-link">_acceptAdmin</a>
+            <li class="nav-item" data-level="4"><a href="#core" class="nav-link">core</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setborrowpaused" class="nav-link">_setBorrowPaused</a>
+            <li class="nav-item" data-level="4"><a href="#isburner" class="nav-link">isBurner</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setclosefactor" class="nav-link">_setCloseFactor</a>
+            <li class="nav-item" data-level="4"><a href="#isgovernor" class="nav-link">isGovernor</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setcollateralfactor" class="nav-link">_setCollateralFactor</a>
+            <li class="nav-item" data-level="4"><a href="#isguardian" class="nav-link">isGuardian</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setliquidationincentive" class="nav-link">_setLiquidationIncentive</a>
+            <li class="nav-item" data-level="4"><a href="#isminter" class="nav-link">isMinter</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setpendingadmin" class="nav-link">_setPendingAdmin</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#admin" class="nav-link">admin</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#borrowguardianpaused" class="nav-link">borrowGuardianPaused</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#closefactormantissa" class="nav-link">closeFactorMantissa</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#comptrollerimplementation" class="nav-link">comptrollerImplementation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#liquidationincentivemantissa" class="nav-link">liquidationIncentiveMantissa</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#markets" class="nav-link">markets</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#pendingadmin" class="nav-link">pendingAdmin</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#rewardsdistributors" class="nav-link">rewardsDistributors</a>
+            <li class="nav-item" data-level="4"><a href="#ispcvcontroller" class="nav-link">isPCVController</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -170,7 +138,13 @@
                     <div class="col-md-9" role="main">
 
 <p><a href="../contracts/">⬅️ Contracts</a></p>
-<h1 id="unitroller"><a href="https://github.com/fei-protocol/fei-protocol-core/blob/develop/contracts/external/Unitroller.sol">Unitroller</a></h1>
+<h1 id="restrictedpermissions"><a href="https://github.com/fei-protocol/fei-protocol-core/blob/develop/contracts/core/RestrictedPermissions.sol">RestrictedPermissions</a></h1>
+<blockquote>
+<p>Restricted Permissions module</p>
+<p>Author: Fei Protocol</p>
+</blockquote>
+<p>this contract is used to deprecate certain roles irrevocably on a contract. Particularly, the burner, pcv controller, and governor all revert when called. To use, call setCore on the target contract and set to RestrictedPermissions. By revoking the governor, a new Core cannot be set. This enforces that onlyGovernor, onlyBurner, and onlyPCVController actions are irrevocably disabled. The mint and guardian rolls pass through to the immutably referenced core contract.</p>
+<p>DEV NOTE: IMPORTANT: fei() and tribe() calls normally present on Core are not used here, so this contract only works for contracts that don't rely on them.</p>
 <h2 id="mainnet-implementations">Mainnet implementations</h2>
 <table>
 <thead>
@@ -181,21 +155,20 @@
 </thead>
 <tbody>
 <tr>
-<td>rariPool8Comptroller</td>
-<td><a href="https://etherscan.io/address/0xc54172e34046c1653d1920d40333dd358c7a1af4">0xc54172e34046c1653d1920d40333dd358c7a1af4</a></td>
-</tr>
-<tr>
-<td>rariPool146Comptroller</td>
-<td><a href="https://etherscan.io/address/0x88F7c23EA6C4C404dA463Bc9aE03b012B32DEf9e">0x88F7c23EA6C4C404dA463Bc9aE03b012B32DEf9e</a></td>
+<td>restrictedPermissions</td>
+<td><a href="https://etherscan.io/address/0x10ffa0CD36Bc16b355d21A08DF4a552c4A9FEC10">0x10ffa0CD36Bc16b355d21A08DF4a552c4A9FEC10</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="related-contracts">Related Contracts</h2>
-<p><a href="../CErc20Delegator/">CErc20Delegator</a>, <a href="../IRewardsDistributorAdmin/">IRewardsDistributorAdmin</a>, <a href="../OptimisticTimelock/">OptimisticTimelock</a>, <a href="IMasterOracle.md">IMasterOracle</a>, <a href="FuseGuardian.md">FuseGuardian</a>, <a href="FuseAdmin.md">FuseAdmin</a></p>
+<p><a href="../Fei/">Fei</a>, <a href="../Core/">Core</a></p>
 <h2 id="methods">Methods</h2>
-<h4 id="_acceptadmin">_acceptAdmin</h4>
-<pre><code class="language-javascript">function _acceptAdmin() nonpayable returns(uint256)
+<h4 id="core">core</h4>
+<pre><code class="language-javascript">function core() view returns(address)
 </code></pre>
+<blockquote>
+<p>passthrough core to reference</p>
+</blockquote>
 <h5 id="returns">Returns</h5>
 <table>
 <thead>
@@ -208,13 +181,13 @@
 <tbody>
 <tr>
 <td></td>
-<td>uint256</td>
+<td>address</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="_setborrowpaused">_setBorrowPaused</h4>
-<pre><code class="language-javascript">function _setBorrowPaused(address,bool) nonpayable
+<h4 id="isburner">isBurner</h4>
+<pre><code class="language-javascript">function isBurner(address) pure returns(bool)
 </code></pre>
 <h5 id="params">Params</h5>
 <table>
@@ -227,33 +200,8 @@
 </thead>
 <tbody>
 <tr>
-<td>cToken</td>
+<td></td>
 <td>address</td>
-<td></td>
-</tr>
-<tr>
-<td>borrowPaused</td>
-<td>bool</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="_setclosefactor">_setCloseFactor</h4>
-<pre><code class="language-javascript">function _setCloseFactor(uint256) nonpayable returns(uint256)
-</code></pre>
-<h5 id="params_1">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newCloseFactorMantissa</td>
-<td>uint256</td>
 <td></td>
 </tr>
 </tbody>
@@ -270,15 +218,18 @@
 <tbody>
 <tr>
 <td></td>
-<td>uint256</td>
+<td>bool</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="_setcollateralfactor">_setCollateralFactor</h4>
-<pre><code class="language-javascript">function _setCollateralFactor(address,uint256) nonpayable returns(uint256)
+<h4 id="isgovernor">isGovernor</h4>
+<pre><code class="language-javascript">function isGovernor(address) pure returns(bool)
 </code></pre>
-<h5 id="params_2">Params</h5>
+<blockquote>
+<p>returns false rather than reverting so calls to onlyGuardianOrGovernor don't revert</p>
+</blockquote>
+<h5 id="params_1">Params</h5>
 <table>
 <thead>
 <tr>
@@ -289,13 +240,8 @@
 </thead>
 <tbody>
 <tr>
-<td>cToken</td>
-<td>address</td>
 <td></td>
-</tr>
-<tr>
-<td>newCollateralFactorMantissa</td>
-<td>uint256</td>
+<td>address</td>
 <td></td>
 </tr>
 </tbody>
@@ -312,15 +258,18 @@
 <tbody>
 <tr>
 <td></td>
-<td>uint256</td>
+<td>bool</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="_setliquidationincentive">_setLiquidationIncentive</h4>
-<pre><code class="language-javascript">function _setLiquidationIncentive(uint256) nonpayable returns(uint256)
+<h4 id="isguardian">isGuardian</h4>
+<pre><code class="language-javascript">function isGuardian(address) view returns(bool)
 </code></pre>
-<h5 id="params_3">Params</h5>
+<blockquote>
+<p>checks if address is a guardian</p>
+</blockquote>
+<h5 id="params_2">Params</h5>
 <table>
 <thead>
 <tr>
@@ -331,9 +280,9 @@
 </thead>
 <tbody>
 <tr>
-<td>newLiquidationIncentiveMantissa</td>
-<td>uint256</td>
-<td></td>
+<td>_address</td>
+<td>address</td>
+<td>address to check</td>
 </tr>
 </tbody>
 </table>
@@ -349,15 +298,18 @@
 <tbody>
 <tr>
 <td></td>
-<td>uint256</td>
-<td></td>
+<td>bool</td>
+<td>true _address is a guardian</td>
 </tr>
 </tbody>
 </table>
-<h4 id="_setpendingadmin">_setPendingAdmin</h4>
-<pre><code class="language-javascript">function _setPendingAdmin(address) nonpayable returns(uint256)
+<h4 id="isminter">isMinter</h4>
+<pre><code class="language-javascript">function isMinter(address) view returns(bool)
 </code></pre>
-<h5 id="params_4">Params</h5>
+<blockquote>
+<p>checks if address is a minter</p>
+</blockquote>
+<h5 id="params_3">Params</h5>
 <table>
 <thead>
 <tr>
@@ -368,9 +320,9 @@
 </thead>
 <tbody>
 <tr>
-<td>newPendingAdmin</td>
+<td>_address</td>
 <td>address</td>
-<td></td>
+<td>address to check</td>
 </tr>
 </tbody>
 </table>
@@ -386,14 +338,31 @@
 <tbody>
 <tr>
 <td></td>
-<td>uint256</td>
+<td>bool</td>
+<td>true _address is a minter</td>
+</tr>
+</tbody>
+</table>
+<h4 id="ispcvcontroller">isPCVController</h4>
+<pre><code class="language-javascript">function isPCVController(address) pure returns(bool)
+</code></pre>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>address</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="admin">admin</h4>
-<pre><code class="language-javascript">function admin() view returns(address)
-</code></pre>
 <h5 id="returns_5">Returns</h5>
 <table>
 <thead>
@@ -406,203 +375,7 @@
 <tbody>
 <tr>
 <td></td>
-<td>address</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="borrowguardianpaused">borrowGuardianPaused</h4>
-<pre><code class="language-javascript">function borrowGuardianPaused(address) view returns(bool)
-</code></pre>
-<h5 id="params_5">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cToken</td>
-<td>address</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="returns_6">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
 <td>bool</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="closefactormantissa">closeFactorMantissa</h4>
-<pre><code class="language-javascript">function closeFactorMantissa() view returns(uint256)
-</code></pre>
-<h5 id="returns_7">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="comptrollerimplementation">comptrollerImplementation</h4>
-<pre><code class="language-javascript">function comptrollerImplementation() view returns(address)
-</code></pre>
-<h5 id="returns_8">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>address</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="liquidationincentivemantissa">liquidationIncentiveMantissa</h4>
-<pre><code class="language-javascript">function liquidationIncentiveMantissa() view returns(uint256)
-</code></pre>
-<h5 id="returns_9">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="markets">markets</h4>
-<pre><code class="language-javascript">function markets(address) view returns(bool,uint256)
-</code></pre>
-<h5 id="params_6">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>address</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="returns_10">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>isListed</td>
-<td>bool</td>
-<td></td>
-</tr>
-<tr>
-<td>collateralFactorMantissa</td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="pendingadmin">pendingAdmin</h4>
-<pre><code class="language-javascript">function pendingAdmin() view returns(address)
-</code></pre>
-<h5 id="returns_11">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>address</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="rewardsdistributors">rewardsDistributors</h4>
-<pre><code class="language-javascript">function rewardsDistributors(uint256) view returns(address)
-</code></pre>
-<h5 id="params_7">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>index</td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="returns_12">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>address</td>
 <td></td>
 </tr>
 </tbody>

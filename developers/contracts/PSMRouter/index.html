@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Unitroller - Fei Protocol Docs</title>
+        <title>PSMRouter - Fei Protocol Docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -72,7 +72,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/fei-protocol/fei-docs/edit/main/docs/developers/contracts/Unitroller.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/fei-protocol/fei-docs/edit/main/docs/developers/contracts/PSMRouter.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -92,7 +92,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#unitroller" class="nav-link">Unitroller</a>
+            <li class="nav-item" data-level="1"><a href="#psmrouter" class="nav-link">PSMRouter</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#mainnet-implementations" class="nav-link">Mainnet implementations</a>
               <ul class="nav flex-column">
@@ -104,59 +104,43 @@
             </li>
             <li class="nav-item" data-level="2"><a href="#methods" class="nav-link">Methods</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="4"><a href="#_acceptadmin" class="nav-link">_acceptAdmin</a>
+            <li class="nav-item" data-level="4"><a href="#fei" class="nav-link">fei</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setborrowpaused" class="nav-link">_setBorrowPaused</a>
+            <li class="nav-item" data-level="4"><a href="#getmaxmintamountout" class="nav-link">getMaxMintAmountOut</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setclosefactor" class="nav-link">_setCloseFactor</a>
+            <li class="nav-item" data-level="4"><a href="#getmaxredeemamountout" class="nav-link">getMaxRedeemAmountOut</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setcollateralfactor" class="nav-link">_setCollateralFactor</a>
+            <li class="nav-item" data-level="4"><a href="#getmintamountout" class="nav-link">getMintAmountOut</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setliquidationincentive" class="nav-link">_setLiquidationIncentive</a>
+            <li class="nav-item" data-level="4"><a href="#getredeemamountout" class="nav-link">getRedeemAmountOut</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#_setpendingadmin" class="nav-link">_setPendingAdmin</a>
+            <li class="nav-item" data-level="4"><a href="#mint" class="nav-link">mint</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#admin" class="nav-link">admin</a>
+            <li class="nav-item" data-level="4"><a href="#mint_1" class="nav-link">mint</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#borrowguardianpaused" class="nav-link">borrowGuardianPaused</a>
+            <li class="nav-item" data-level="4"><a href="#psm" class="nav-link">psm</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#closefactormantissa" class="nav-link">closeFactorMantissa</a>
+            <li class="nav-item" data-level="4"><a href="#redeem" class="nav-link">redeem</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="4"><a href="#comptrollerimplementation" class="nav-link">comptrollerImplementation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#liquidationincentivemantissa" class="nav-link">liquidationIncentiveMantissa</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#markets" class="nav-link">markets</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#pendingadmin" class="nav-link">pendingAdmin</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="4"><a href="#rewardsdistributors" class="nav-link">rewardsDistributors</a>
+            <li class="nav-item" data-level="4"><a href="#redeem_1" class="nav-link">redeem</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -170,7 +154,8 @@
                     <div class="col-md-9" role="main">
 
 <p><a href="../contracts/">⬅️ Contracts</a></p>
-<h1 id="unitroller"><a href="https://github.com/fei-protocol/fei-protocol-core/blob/develop/contracts/external/Unitroller.sol">Unitroller</a></h1>
+<h1 id="psmrouter"><a href="https://github.com/fei-protocol/fei-protocol-core/blob/develop/contracts/stabilizer/PSMRouter.sol">PSMRouter</a></h1>
+<p>the PSM router is an ungoverned, non custodial contract that allows user to seamlessly wrap and unwrap their WETH for trading against the PegStabilityModule.</p>
 <h2 id="mainnet-implementations">Mainnet implementations</h2>
 <table>
 <thead>
@@ -181,21 +166,20 @@
 </thead>
 <tbody>
 <tr>
-<td>rariPool8Comptroller</td>
-<td><a href="https://etherscan.io/address/0xc54172e34046c1653d1920d40333dd358c7a1af4">0xc54172e34046c1653d1920d40333dd358c7a1af4</a></td>
-</tr>
-<tr>
-<td>rariPool146Comptroller</td>
-<td><a href="https://etherscan.io/address/0x88F7c23EA6C4C404dA463Bc9aE03b012B32DEf9e">0x88F7c23EA6C4C404dA463Bc9aE03b012B32DEf9e</a></td>
+<td>ethPSMRouter</td>
+<td><a href="https://etherscan.io/address/0xFA6a07f3551bF0ceE88D494780ce793AF452Cbca">0xFA6a07f3551bF0ceE88D494780ce793AF452Cbca</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="related-contracts">Related Contracts</h2>
-<p><a href="../CErc20Delegator/">CErc20Delegator</a>, <a href="../IRewardsDistributorAdmin/">IRewardsDistributorAdmin</a>, <a href="../OptimisticTimelock/">OptimisticTimelock</a>, <a href="IMasterOracle.md">IMasterOracle</a>, <a href="FuseGuardian.md">FuseGuardian</a>, <a href="FuseAdmin.md">FuseAdmin</a></p>
+<p><a href="MintRedeemPausePSM.md">MintRedeemPausePSM</a></p>
 <h2 id="methods">Methods</h2>
-<h4 id="_acceptadmin">_acceptAdmin</h4>
-<pre><code class="language-javascript">function _acceptAdmin() nonpayable returns(uint256)
+<h4 id="fei">fei</h4>
+<pre><code class="language-javascript">function fei() view returns(address)
 </code></pre>
+<blockquote>
+<p>reference to the FEI contract used. Does not reference core to save on gas Router can be redeployed if FEI address changes</p>
+</blockquote>
 <h5 id="returns">Returns</h5>
 <table>
 <thead>
@@ -208,56 +192,17 @@
 <tbody>
 <tr>
 <td></td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="_setborrowpaused">_setBorrowPaused</h4>
-<pre><code class="language-javascript">function _setBorrowPaused(address,bool) nonpayable
-</code></pre>
-<h5 id="params">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cToken</td>
 <td>address</td>
 <td></td>
 </tr>
-<tr>
-<td>borrowPaused</td>
-<td>bool</td>
-<td></td>
-</tr>
 </tbody>
 </table>
-<h4 id="_setclosefactor">_setCloseFactor</h4>
-<pre><code class="language-javascript">function _setCloseFactor(uint256) nonpayable returns(uint256)
+<h4 id="getmaxmintamountout">getMaxMintAmountOut</h4>
+<pre><code class="language-javascript">function getMaxMintAmountOut() view returns(uint256)
 </code></pre>
-<h5 id="params_1">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>newCloseFactorMantissa</td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<blockquote>
+<p>the maximum mint amount out</p>
+</blockquote>
 <h5 id="returns_1">Returns</h5>
 <table>
 <thead>
@@ -275,31 +220,12 @@
 </tr>
 </tbody>
 </table>
-<h4 id="_setcollateralfactor">_setCollateralFactor</h4>
-<pre><code class="language-javascript">function _setCollateralFactor(address,uint256) nonpayable returns(uint256)
+<h4 id="getmaxredeemamountout">getMaxRedeemAmountOut</h4>
+<pre><code class="language-javascript">function getMaxRedeemAmountOut() view returns(uint256)
 </code></pre>
-<h5 id="params_2">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cToken</td>
-<td>address</td>
-<td></td>
-</tr>
-<tr>
-<td>newCollateralFactorMantissa</td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
+<blockquote>
+<p>the maximum redeem amount out</p>
+</blockquote>
 <h5 id="returns_2">Returns</h5>
 <table>
 <thead>
@@ -317,10 +243,13 @@
 </tr>
 </tbody>
 </table>
-<h4 id="_setliquidationincentive">_setLiquidationIncentive</h4>
-<pre><code class="language-javascript">function _setLiquidationIncentive(uint256) nonpayable returns(uint256)
+<h4 id="getmintamountout">getMintAmountOut</h4>
+<pre><code class="language-javascript">function getMintAmountOut(uint256) view returns(uint256)
 </code></pre>
-<h5 id="params_3">Params</h5>
+<blockquote>
+<p>view only pass through function to get amount of FEI out with given amount of ETH in</p>
+</blockquote>
+<h5 id="params">Params</h5>
 <table>
 <thead>
 <tr>
@@ -331,7 +260,7 @@
 </thead>
 <tbody>
 <tr>
-<td>newLiquidationIncentiveMantissa</td>
+<td>amountIn</td>
 <td>uint256</td>
 <td></td>
 </tr>
@@ -348,16 +277,19 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>amountFeiOut</td>
 <td>uint256</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="_setpendingadmin">_setPendingAdmin</h4>
-<pre><code class="language-javascript">function _setPendingAdmin(address) nonpayable returns(uint256)
+<h4 id="getredeemamountout">getRedeemAmountOut</h4>
+<pre><code class="language-javascript">function getRedeemAmountOut(uint256) view returns(uint256)
 </code></pre>
-<h5 id="params_4">Params</h5>
+<blockquote>
+<p>view only pass through function to get amount of ETH out with given amount of FEI in</p>
+</blockquote>
+<h5 id="params_1">Params</h5>
 <table>
 <thead>
 <tr>
@@ -368,8 +300,8 @@
 </thead>
 <tbody>
 <tr>
-<td>newPendingAdmin</td>
-<td>address</td>
+<td>amountFeiIn</td>
+<td>uint256</td>
 <td></td>
 </tr>
 </tbody>
@@ -385,15 +317,46 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>amountTokenOut</td>
 <td>uint256</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="admin">admin</h4>
-<pre><code class="language-javascript">function admin() view returns(address)
+<h4 id="mint">mint</h4>
+<pre><code class="language-javascript">function mint(address,uint256,uint256) payable returns(uint256)
 </code></pre>
+<blockquote>
+<p>Mints fei to the given address, with a minimum amount required</p>
+<p>This wraps ETH and then calls into the PSM to mint the fei. We return the amount of fei minted.</p>
+</blockquote>
+<h5 id="params_2">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to</td>
+<td>address</td>
+<td>The address to mint fei to</td>
+</tr>
+<tr>
+<td>minAmountOut</td>
+<td>uint256</td>
+<td>The minimum amount of fei to mint</td>
+</tr>
+<tr>
+<td>ethAmountIn</td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h5 id="returns_5">Returns</h5>
 <table>
 <thead>
@@ -406,15 +369,19 @@
 <tbody>
 <tr>
 <td></td>
-<td>address</td>
+<td>uint256</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="borrowguardianpaused">borrowGuardianPaused</h4>
-<pre><code class="language-javascript">function borrowGuardianPaused(address) view returns(bool)
+<h4 id="mint_1">mint</h4>
+<pre><code class="language-javascript">function mint(address,uint256,uint256,uint256) payable returns(uint256)
 </code></pre>
-<h5 id="params_5">Params</h5>
+<blockquote>
+<p>Mints fei to the given address, with a minimum amount required and a deadline</p>
+<p>This wraps ETH and then calls into the PSM to mint the fei. We return the amount of fei minted.</p>
+</blockquote>
+<h5 id="params_3">Params</h5>
 <table>
 <thead>
 <tr>
@@ -425,8 +392,23 @@
 </thead>
 <tbody>
 <tr>
-<td>cToken</td>
+<td>to</td>
 <td>address</td>
+<td>The address to mint fei to</td>
+</tr>
+<tr>
+<td>minAmountOut</td>
+<td>uint256</td>
+<td>The minimum amount of fei to mint</td>
+</tr>
+<tr>
+<td>deadline</td>
+<td>uint256</td>
+<td>The deadline for this order to be filled</td>
+</tr>
+<tr>
+<td>ethAmountIn</td>
+<td>uint256</td>
 <td></td>
 </tr>
 </tbody>
@@ -443,35 +425,18 @@
 <tbody>
 <tr>
 <td></td>
-<td>bool</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="closefactormantissa">closeFactorMantissa</h4>
-<pre><code class="language-javascript">function closeFactorMantissa() view returns(uint256)
-</code></pre>
-<h5 id="returns_7">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
 <td>uint256</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<h4 id="comptrollerimplementation">comptrollerImplementation</h4>
-<pre><code class="language-javascript">function comptrollerImplementation() view returns(address)
+<h4 id="psm">psm</h4>
+<pre><code class="language-javascript">function psm() view returns(address)
 </code></pre>
-<h5 id="returns_8">Returns</h5>
+<blockquote>
+<p>reference to the PegStabilityModule that this router interacts with</p>
+</blockquote>
+<h5 id="returns_7">Returns</h5>
 <table>
 <thead>
 <tr>
@@ -488,9 +453,94 @@
 </tr>
 </tbody>
 </table>
-<h4 id="liquidationincentivemantissa">liquidationIncentiveMantissa</h4>
-<pre><code class="language-javascript">function liquidationIncentiveMantissa() view returns(uint256)
+<h4 id="redeem">redeem</h4>
+<pre><code class="language-javascript">function redeem(address,uint256,uint256) nonpayable returns(uint256)
 </code></pre>
+<blockquote>
+<p>Redeems fei for ETH First pull user FEI into this contract Then call redeem on the PSM to turn the FEI into weth Withdraw all weth to eth in the router Send the eth to the specified recipient</p>
+</blockquote>
+<h5 id="params_4">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to</td>
+<td>address</td>
+<td>the address to receive the eth</td>
+</tr>
+<tr>
+<td>amountFeiIn</td>
+<td>uint256</td>
+<td>the amount of FEI to redeem</td>
+</tr>
+<tr>
+<td>minAmountOut</td>
+<td>uint256</td>
+<td>the minimum amount of weth to receive</td>
+</tr>
+</tbody>
+</table>
+<h5 id="returns_8">Returns</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>uint256</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="redeem_1">redeem</h4>
+<pre><code class="language-javascript">function redeem(address,uint256,uint256,uint256) nonpayable returns(uint256)
+</code></pre>
+<blockquote>
+<p>Redeems fei for ETH First pull user FEI into this contract Then call redeem on the PSM to turn the FEI into weth Withdraw all weth to eth in the router Send the eth to the specified recipient</p>
+</blockquote>
+<h5 id="params_5">Params</h5>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>to</td>
+<td>address</td>
+<td>the address to receive the eth</td>
+</tr>
+<tr>
+<td>amountFeiIn</td>
+<td>uint256</td>
+<td>the amount of FEI to redeem</td>
+</tr>
+<tr>
+<td>minAmountOut</td>
+<td>uint256</td>
+<td>the minimum amount of weth to receive</td>
+</tr>
+<tr>
+<td>deadline</td>
+<td>uint256</td>
+<td>The deadline for this order to be filled</td>
+</tr>
+</tbody>
+</table>
 <h5 id="returns_9">Returns</h5>
 <table>
 <thead>
@@ -504,105 +554,6 @@
 <tr>
 <td></td>
 <td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="markets">markets</h4>
-<pre><code class="language-javascript">function markets(address) view returns(bool,uint256)
-</code></pre>
-<h5 id="params_6">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>address</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="returns_10">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>isListed</td>
-<td>bool</td>
-<td></td>
-</tr>
-<tr>
-<td>collateralFactorMantissa</td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="pendingadmin">pendingAdmin</h4>
-<pre><code class="language-javascript">function pendingAdmin() view returns(address)
-</code></pre>
-<h5 id="returns_11">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>address</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h4 id="rewardsdistributors">rewardsDistributors</h4>
-<pre><code class="language-javascript">function rewardsDistributors(uint256) view returns(address)
-</code></pre>
-<h5 id="params_7">Params</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>index</td>
-<td>uint256</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h5 id="returns_12">Returns</h5>
-<table>
-<thead>
-<tr>
-<th>Param</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>address</td>
 <td></td>
 </tr>
 </tbody>
